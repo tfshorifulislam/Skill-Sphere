@@ -1,43 +1,32 @@
-import { Button, Chip, Separator } from '@heroui/react';
-import Image from 'next/image';
-import Link from 'next/link';
-import React from 'react';
-import { IoHeart } from 'react-icons/io5';
-import { PiDownloadSimpleLight } from 'react-icons/pi';
+import { Button } from "@heroui/react";
+import Image from "next/image";
+import { FcRating } from "react-icons/fc";
 
 const CoursesCard = ({ course }) => {
     console.log(course)
-    const {category, description,image, rating, title} = course;
+    const { category, instructor, description, image, rating, title } = course;
     return (
-        <div className='rounded-xl p-5 shadow-sm border'>
-
-            <div className='relative w-full aspect-square'>
-                <Image
-                    className='rounded-xl object-cover'
-                    fill
-                    sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
-                    src={image}
-                    alt={title} />
-                    <Chip size='sm' className='absolute right-2 top-2'>{category}</Chip>
+        <div className="border shadow-sm p-5 rounded-xl bg-white">
+            <img
+                className="rounded-xl"
+                src={image}
+                alt={title} />
+            <div>
+                <h1 className="font-semibold md:font-bold mt-5 text-lg md:text-2xl ">
+                    {title}
+                </h1>
+            </div>
+            <div className="flex  justify-between">
+                <p className=" mt-2">
+                    instructor: {instructor}
+                </p>
+                <p className="font-medium mt-2 flex gap-1 items-center">
+                    <FcRating /> {rating}
+                </p>
             </div>
 
-            <div className='font-medium text-2xl my-3'>
-                <h2>{title}</h2>
-            </div>
-            <div className='flex gap-4 my-5'>
-                <div className='flex items-center gap-1'>
-                    <IoHeart />
-                    {/* <p>{course.likes}</p> */}
-                </div>
-                <Separator orientation='vertical' />
-                <div className='flex items-center gap-1'>
-                    <PiDownloadSimpleLight />
-                    {/* <p>{course.downloads}</p> */}
-                </div>
-            </div>
-            <Link href={`/courses/${course.id}`}>
-            <Button className='w-full' variant='outline'>View</Button>
-            </Link>
+
+            <Button variant="outline" className='w-full mt-8'>View Details</Button>
         </div>
     );
 };
