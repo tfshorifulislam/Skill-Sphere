@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { NavbarDrawer } from "./NavbarDrawer";
 
+
 const Navbar = () => {
 
     return (
@@ -11,7 +12,7 @@ const Navbar = () => {
                 <Link
                     href={'/'}>
                     <Image
-                        src='/LOGO.png'
+                        src={'/LOGO.png'}
                         width={200}
                         height={200}
                         alt="logo"
