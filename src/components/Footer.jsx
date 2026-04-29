@@ -31,31 +31,31 @@ const Footer = () => {
                     {/* Company */}
                     <div>
                         <h3 className="text-sm font-semibold text-black dark:text-white mb-4">
-                            Company
+                            Menu 
                         </h3>
                         <ul className="space-y-3 text-sm text-gray-600 dark:text-gray-400">
                             <li>
                                 <Link
-                                    href="/about"
+                                    href="/"
                                     className="hover:text-black dark:hover:text-white transition"
                                 >
-                                    About
+                                    Home
                                 </Link>
                             </li>
                             <li>
                                 <Link
-                                    href="/contact"
+                                    href="/courses"
                                     className="hover:text-black dark:hover:text-white transition"
                                 >
-                                    Contact
+                                    Courses
                                 </Link>
                             </li>
                             <li>
                                 <Link
-                                    href="/terms"
+                                    href="/profile"
                                     className="hover:text-black dark:hover:text-white transition"
                                 >
-                                    Terms
+                                    My Profile
                                 </Link>
                             </li>
                         </ul>
@@ -114,7 +114,7 @@ const Footer = () => {
 
                 {/* Bottom */}
                 <div className="mt-6 flex justify-between flex-col md:flex-row items-center space-y-3 text-xs text-gray-500 dark:text-gray-400">
-                    <p>© {new Date().getFullYear()} pixgen. All rights reserved.</p>
+                    <p>© {new Date().getFullYear()} skill-sphere. All rights reserved.</p>
 
                     <div className="flex items-center gap-6">
                         <Link
