@@ -1,11 +1,47 @@
-import React from 'react';
+import { Button } from "@heroui/react";
+import Image from "next/image";
+import Link from "next/link";
+import { NavbarDrawer } from "./NavbarDrawer";
 
 const Navbar = () => {
+
     return (
-        <div>
-            <h1>
-                this is navbar
-            </h1>
+        <div className="bg-white w-full py-3 shadow-sm">
+            <div className="w-11/12 mx-auto flex justify-between items-center">
+                <Link
+                    href={'/'}>
+                    <Image
+                        src='/LOGO.png'
+                        width={200}
+                        height={200}
+                        alt="logo"
+                    />
+                </Link>
+                <ul className="gap-10 hidden md:flex">
+                    <li>
+                        <Link href={'/'}>Home</Link>
+                    </li>
+                    <li>
+                        <Link href={'/courses'}>Courses</Link>
+                    </li>
+                    <li>
+                        <Link href={'/profile'}>My Profile</Link>
+                    </li>
+                </ul>
+                <div>
+                    <div className="hidden md:flex gap-4">
+                        <Link href={'/login'}>
+                            <Button variant="primary">Login</Button>
+                        </Link>
+                        <Link href={'/register'}>
+                            <Button variant="outline">Register</Button>
+                        </Link>
+                    </div>
+                    <div className='flex md:hidden'>
+                        <NavbarDrawer />
+                    </div>
+                </div>
+            </div>
         </div>
     );
 };
