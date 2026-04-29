@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "title": "Complete Web Development Bootcamp",
+    "instructor": "John Doe",
+    "duration": "20 hours",
+    "rating": 4.8,
+    "level": "Beginner",
+    "description": "Learn full-stack web development from scratch.",
+    "image": "https://i.postimg.cc/example-course1.png",
+    "category": "Development"
+  },
+  {
+    "id": 2,
+    "title": "Advanced JavaScript Mastery",
+    "instructor": "Jane Smith",
+    "duration": "15 hours",
+    "rating": 4.7,
+    "level": "Intermediate",
+    "description": "Deep dive into modern JavaScript concepts.",
+    "image": "https://i.postimg.cc/example-course2.png",
+    "category": "Development"
+  },
+  {
+    "id": 3,
+    "title": "UI/UX Design Fundamentals",
+    "instructor": "Emily Johnson",
+    "duration": "12 hours",
+    "rating": 4.6,
+    "level": "Beginner",
+    "description": "Learn the basics of user interface and experience design.",
+    "image": "https://i.postimg.cc/example-course3.png",
+    "category": "Design"
+  },
+  {
+    "id": 4,
+    "title": "React JS Complete Guide",
+    "instructor": "Michael Brown",
+    "duration": "18 hours",
+    "rating": 4.9,
+    "level": "Intermediate",
+    "description": "Build powerful web apps using React.",
+    "image": "https://i.postimg.cc/example-course4.png",
+    "category": "Development"
+  },
+  {
+    "id": 5,
+    "title": "Python for Data Science",
+    "instructor": "Sarah Wilson",
+    "duration": "22 hours",
+    "rating": 4.8,
+    "level": "Beginner",
+    "description": "Analyze data and build models using Python.",
+    "image": "https://i.postimg.cc/example-course5.png",
+    "category": "Data Science"
+  },
+  {
+    "id": 6,
+    "title": "Digital Marketing Essentials",
+    "instructor": "David Lee",
+    "duration": "10 hours",
+    "rating": 4.5,
+    "level": "Beginner",
+    "description": "Master SEO, social media, and online marketing strategies.",
+    "image": "https://i.postimg.cc/example-course6.png",
+    "category": "Marketing"
+  },
+  {
+    "id": 7,
+    "title": "Node.js Backend Development",
+    "instructor": "Chris Evans",
+    "duration": "16 hours",
+    "rating": 4.7,
+    "level": "Intermediate",
+    "description": "Build scalable backend applications using Node.js.",
+    "image": "https://i.postimg.cc/example-course7.png",
+    "category": "Development"
+  },
+  {
+    "id": 8,
+    "title": "Graphic Design Masterclass",
+    "instructor": "Sophia Martinez",
+    "duration": "14 hours",
+    "rating": 4.6,
+    "level": "Beginner",
+    "description": "Learn Photoshop, Illustrator, and design principles.",
+    "image": "https://i.postimg.cc/example-course8.png",
+    "category": "Design"
+  },
+  {
+    "id": 9,
+    "title": "Machine Learning A-Z",
+    "instructor": "Daniel Kim",
+    "duration": "25 hours",
+    "rating": 4.9,
+    "level": "Advanced",
+    "description": "Master machine learning algorithms and techniques.",
+    "image": "https://i.postimg.cc/example-course9.png",
+    "category": "Data Science"
+  },
+  {
+    "id": 10,
+    "title": "Flutter Mobile App Development",
+    "instructor": "Olivia Davis",
+    "duration": "17 hours",
+    "rating": 4.7,
+    "level": "Intermediate",
+    "description": "Create cross-platform mobile apps using Flutter.",
+    "image": "https://i.postimg.cc/example-course10.png",
+    "category": "Development"
+  }
+]
