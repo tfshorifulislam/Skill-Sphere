@@ -1,5 +1,5 @@
 import Banner from '@/components/Banner';
-import Top3Courses from '@/components/top3Courses';
+import Top3Courses from '@/components/top3CoursesDataFetch';
 import React from 'react';
 
 const HomePage = () => {

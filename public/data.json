@@ -7,7 +7,7 @@
     "rating": 4.8,
     "level": "Beginner",
     "description": "Learn full-stack web development from scratch.",
-    "image": "https://i.postimg.cc/example-course1.png",
+    "image": "https://i.ibb.co.com/vCWXBc8t/Complete-Web-Development-Bootcamp.jpg",
     "category": "Development"
   },
   {
@@ -18,7 +18,7 @@
     "rating": 4.7,
     "level": "Intermediate",
     "description": "Deep dive into modern JavaScript concepts.",
-    "image": "https://i.postimg.cc/example-course2.png",
+    "image": "https://i.ibb.co.com/vCWXBc8t/Complete-Web-Development-Bootcamp.jpg",
     "category": "Development"
   },
   {
@@ -29,7 +29,7 @@
     "rating": 4.6,
     "level": "Beginner",
     "description": "Learn the basics of user interface and experience design.",
-    "image": "https://i.postimg.cc/example-course3.png",
+    "image": "https://i.ibb.co.com/vCWXBc8t/Complete-Web-Development-Bootcamp.jpg",
     "category": "Design"
   },
   {
@@ -40,7 +40,7 @@
     "rating": 4.9,
     "level": "Intermediate",
     "description": "Build powerful web apps using React.",
-    "image": "https://i.postimg.cc/example-course4.png",
+    "image": "https://i.ibb.co.com/vCWXBc8t/Complete-Web-Development-Bootcamp.jpg",
     "category": "Development"
   },
   {
@@ -51,7 +51,7 @@
     "rating": 4.8,
     "level": "Beginner",
     "description": "Analyze data and build models using Python.",
-    "image": "https://i.postimg.cc/example-course5.png",
+    "image": "https://i.ibb.co.com/vCWXBc8t/Complete-Web-Development-Bootcamp.jpg",
     "category": "Data Science"
   },
   {
@@ -62,7 +62,7 @@
     "rating": 4.5,
     "level": "Beginner",
     "description": "Master SEO, social media, and online marketing strategies.",
-    "image": "https://i.postimg.cc/example-course6.png",
+    "image": "https://i.ibb.co.com/vCWXBc8t/Complete-Web-Development-Bootcamp.jpg",
     "category": "Marketing"
   },
   {
@@ -73,7 +73,7 @@
     "rating": 4.7,
     "level": "Intermediate",
     "description": "Build scalable backend applications using Node.js.",
-    "image": "https://i.postimg.cc/example-course7.png",
+    "image": "https://i.ibb.co.com/vCWXBc8t/Complete-Web-Development-Bootcamp.jpg",
     "category": "Development"
   },
   {
@@ -84,7 +84,7 @@
     "rating": 4.6,
     "level": "Beginner",
     "description": "Learn Photoshop, Illustrator, and design principles.",
-    "image": "https://i.postimg.cc/example-course8.png",
+    "image": "https://i.ibb.co.com/vCWXBc8t/Complete-Web-Development-Bootcamp.jpg",
     "category": "Design"
   },
   {
@@ -95,7 +95,7 @@
     "rating": 4.9,
     "level": "Advanced",
     "description": "Master machine learning algorithms and techniques.",
-    "image": "https://i.postimg.cc/example-course9.png",
+    "image": "https://i.ibb.co.com/vCWXBc8t/Complete-Web-Development-Bootcamp.jpg",
     "category": "Data Science"
   },
   {
@@ -106,7 +106,7 @@
     "rating": 4.7,
     "level": "Intermediate",
     "description": "Create cross-platform mobile apps using Flutter.",
-    "image": "https://i.postimg.cc/example-course10.png",
+    "image": "https://i.ibb.co.com/vCWXBc8t/Complete-Web-Development-Bootcamp.jpg",
     "category": "Development"
   }
 ]

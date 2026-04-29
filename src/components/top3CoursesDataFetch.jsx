@@ -1,4 +1,5 @@
 import React from 'react';
+import CoursesCard from './CoursesCard';
 
 const Top3Courses = async () => {
     const res = await fetch('https://skill-sphere-topaz.vercel.app/data.json');
@@ -8,7 +9,10 @@ const Top3Courses = async () => {
     return (
         <div>
             {
-                top3Courses.map(i => <div key={i.id}>{i.title}</div>)
+                top3Courses.map(course =>
+                    <CoursesCard
+                        key={course.id}
+                        course={course} />)
             }
         </div>
     );
