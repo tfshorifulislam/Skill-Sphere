@@ -31,7 +31,7 @@ const Footer = () => {
                     {/* Company */}
                     <div>
                         <h3 className="text-sm font-semibold text-black dark:text-white mb-4">
-                            Menu 
+                            Menu
                         </h3>
                         <ul className="space-y-3 text-sm text-gray-600 dark:text-gray-400">
                             <li>
@@ -61,7 +61,7 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    
+
                     <div>
                         <h3 className="text-sm font-semibold text-black dark:text-white mb-4">
                             Contact Us
@@ -101,7 +101,7 @@ const Footer = () => {
                         <TextArea
                             aria-label="Quick project update"
                             className="h-32 "
-                            placeholder="Share your..."
+                            placeholder="Share your feedback"
                         />
                         <Button>
                             Submit
