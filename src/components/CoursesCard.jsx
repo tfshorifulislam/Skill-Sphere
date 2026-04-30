@@ -1,4 +1,5 @@
 import { Button, Chip } from "@heroui/react";
+import Image from "next/image";
 import Link from "next/link";
 import { IoStar } from "react-icons/io5";
 
@@ -8,8 +9,10 @@ const CoursesCard = ({ course }) => {
     return (
         <div className="shadow-sm p-5 rounded-xl bg-white">
             <div className="relative">
-                <img
+                <Image
                     className="rounded-xl"
+                    width={500}
+                    height={500}
                     src={image}
                     alt={title} />
                     <Chip className="absolute bottom-2 right-2">{category}</Chip>

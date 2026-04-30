@@ -18,7 +18,7 @@ const CoursesDetailsPage = async ({ params }) => {
             <Card.Header>
                 <Card.Title
                     className='font-medium md:font-semibold text-lg md:text-xl text-[#313131] mb-4'>{course.title}</Card.Title>
-                <Card.Description>
+                <Card.Description className='md:max-w-[50%] leading-6'>
                     {course.description}
                 </Card.Description>
                 <p className='mt-3'>
