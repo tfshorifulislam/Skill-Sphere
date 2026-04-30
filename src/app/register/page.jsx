@@ -1,6 +1,6 @@
 'use client'
 
-import { Button, Card, Description, FieldError, Form, Input, Label, TextField } from '@heroui/react';
+import { Button, Card, Description, FieldError, Form, Input, Label, Separator, TextField } from '@heroui/react';
 import { authClient } from '@/lib/auth-client';
 import { useRouter } from 'next/navigation';
 import { GrGoogle } from 'react-icons/gr';
@@ -39,7 +39,7 @@ const RegisterPage = () => {
     }
 
     return (
-        <div className="px-5 h-[80vh] flex justify-center items-center">
+        <div className="px-5 mt-10 flex justify-center items-center">
             <Card className="border mx-auto">
                 <h1 className="text-center text-2xl font-bold">Register</h1>
 
@@ -48,7 +48,9 @@ const RegisterPage = () => {
                         name="name"
                         type="text">
                         <Label>Name</Label>
-                        <Input placeholder="Enter your name" />
+                        <Input
+                            className='py-5 bg-transparent rounded-sm'
+                            placeholder="Enter your name" />
                         <FieldError />
                     </TextField>
 
@@ -57,7 +59,9 @@ const RegisterPage = () => {
                         name="image"
                         type="text">
                         <Label>Image URL</Label>
-                        <Input placeholder="Image URL" />
+                        <Input
+                            className='py-5 bg-transparent rounded-sm'
+                            placeholder="Image URL" />
                         <FieldError />
                     </TextField>
 
@@ -74,7 +78,9 @@ const RegisterPage = () => {
                         }}
                     >
                         <Label>Email</Label>
-                        <Input placeholder="john@example.com" />
+                        <Input
+                            className='py-5 bg-transparent rounded-sm'
+                            placeholder="john@example.com" />
                         <FieldError />
                     </TextField>
 
@@ -98,29 +104,41 @@ const RegisterPage = () => {
                         }}
                     >
                         <Label>Password</Label>
-                        <Input placeholder="Enter your password" />
+                        <Input
+                            className='py-5 bg-transparent rounded-sm'
+                            placeholder="Enter your password" />
                         <Description>
                             Must be at least 8 characters with 1 uppercase and 1 number
                         </Description>
                         <FieldError />
                     </TextField>
 
-                    <div className="flex gap-2">
-                        <Button type="submit">
+                    <div className="flex flex-col gap-2">
+                        <Button
+                            className='py-6 rounded-sm mb-4'
+                            fullWidth
+                            type="submit">
 
                             Submit
                         </Button>
-                        <Button type="reset" variant="secondary">
+                        <Button
+                            fullWidth
+                            type="reset"
+                            variant="secondary"
+                            className='py-6 rounded-sm mb-4'
+                        >
                             Reset
                         </Button>
                     </div>
                 </Form>
+                <Separator className='mt-5' />
                 <p className="flex justify-center">
                     Or
                 </p>
                 <Button
+                    className='py-6 rounded-sm mb-4'
                     onClick={handleGoogleSignIn}
-                    className={`w-full`}
+                    fullWidth
                     variant="outline">
                     <GrGoogle />
                     Register With Google
