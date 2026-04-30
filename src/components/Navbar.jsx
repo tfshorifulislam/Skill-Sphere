@@ -7,6 +7,11 @@ import { authClient } from "@/lib/auth-client";
 
 
 const Navbar = () => {
+
+    const handleSignOut = async () => {
+        await authClient.signOut();
+    }
+
     const userData = authClient.useSession()
     const user = userData?.data?.user
     console.log(user)
@@ -44,9 +49,9 @@ const Navbar = () => {
                     </div>}
                     {user && <div className="hidden md:flex gap-4">
                         <Link href={'/login'}>
-                            <Button variant="danger">Logout</Button>
+                            <Button onClick={handleSignOut} variant="danger">Logout</Button>
                         </Link>
-                        
+
                     </div>}
                     <div className='flex md:hidden'>
                         <NavbarDrawer />
