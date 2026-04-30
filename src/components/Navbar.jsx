@@ -1,11 +1,15 @@
+'use client'
 import { Button } from "@heroui/react";
 import Image from "next/image";
 import Link from "next/link";
 import { NavbarDrawer } from "./NavbarDrawer";
+import { authClient } from "@/lib/auth-client";
 
 
 const Navbar = () => {
-
+    const userData = authClient.useSession()
+    const user = userData.data?.user
+    console.log(user)
     return (
         <div className="bg-white w-full py-3 shadow-sm">
             <div className="w-11/12 mx-auto flex justify-between items-center">
@@ -30,14 +34,20 @@ const Navbar = () => {
                     </li>
                 </ul>
                 <div>
-                    <div className="hidden md:flex gap-4">
+                    {!user && <div className="hidden md:flex gap-4">
                         <Link href={'/login'}>
                             <Button variant="primary">Login</Button>
                         </Link>
                         <Link href={'/register'}>
                             <Button variant="outline">Register</Button>
                         </Link>
-                    </div>
+                    </div>}
+                    {user && <div className="hidden md:flex gap-4">
+                        <Link href={'/login'}>
+                            <Button variant="danger">Logout</Button>
+                        </Link>
+                        
+                    </div>}
                     <div className='flex md:hidden'>
                         <NavbarDrawer />
                     </div>
