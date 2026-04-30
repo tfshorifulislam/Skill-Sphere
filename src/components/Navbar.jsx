@@ -16,7 +16,7 @@ const Navbar = () => {
     const user = userData?.data?.user
     console.log(user)
     return (
-        <div className="bg-white w-full py-3 shadow-sm">
+        <div className="bg-white w-full py-3 shadow-sm animate__animated animate__fadeInDown">
             <div className="w-11/12 mx-auto flex justify-between items-center">
                 <Link
                     href={'/'}>
