@@ -62,7 +62,7 @@ export default function SignInPage() {
                     >
                         <Label>Email</Label>
                         <Input placeholder="Enter your Email"
-                            className='py-5 bg-transparent rounded-sm'
+                            className='py-3 bg-transparent rounded-sm'
                         />
                         <FieldError />
                     </TextField>
@@ -88,7 +88,7 @@ export default function SignInPage() {
                     >
                         <Label>Password</Label>
                         <Input
-                            className='py-5 bg-transparent mb-3rounded-sm'
+                            className='py-3 bg-transparent mb-3 rounded-sm'
                             placeholder="Enter your password" />
                         <Description>
                             Must be at least 8 characters with 1 uppercase and 1 number
@@ -98,7 +98,7 @@ export default function SignInPage() {
 
                     <div className="flex gap-2 w-full">
                         <Button fullWidth type="submit"
-                            className='py-6 rounded-sm my-5'>
+                            className='py-4 rounded-sm '>
                             <Check />
                             Submit
                         </Button>
@@ -111,7 +111,7 @@ export default function SignInPage() {
                 <Button
                     fullWidth
                     onClick={handleGoogleSignIn}
-                    className='py-6 rounded-sm mb-4'
+                    className='py-4 rounded-sm mb-4'
                     variant="outline">
                     <GrGoogle />
                     Login With Google

@@ -49,7 +49,7 @@ const RegisterPage = () => {
                         type="text">
                         <Label>Name</Label>
                         <Input
-                            className='py-5 bg-transparent rounded-sm'
+                            className='py-3 bg-transparent rounded-sm'
                             placeholder="Enter your name" />
                         <FieldError />
                     </TextField>
@@ -60,7 +60,7 @@ const RegisterPage = () => {
                         type="text">
                         <Label>Image URL</Label>
                         <Input
-                            className='py-5 bg-transparent rounded-sm'
+                            className='py-3 bg-transparent rounded-sm'
                             placeholder="Image URL" />
                         <FieldError />
                     </TextField>
@@ -79,7 +79,7 @@ const RegisterPage = () => {
                     >
                         <Label>Email</Label>
                         <Input
-                            className='py-5 bg-transparent rounded-sm'
+                            className='py-3 bg-transparent rounded-sm'
                             placeholder="john@example.com" />
                         <FieldError />
                     </TextField>
@@ -105,7 +105,7 @@ const RegisterPage = () => {
                     >
                         <Label>Password</Label>
                         <Input
-                            className='py-5 bg-transparent rounded-sm'
+                            className='py-3 bg-transparent rounded-sm'
                             placeholder="Enter your password" />
                         <Description>
                             Must be at least 8 characters with 1 uppercase and 1 number
@@ -115,7 +115,7 @@ const RegisterPage = () => {
 
                     <div className="flex flex-col gap-2">
                         <Button
-                            className='py-6 rounded-sm mb-4'
+                            className='py-4 rounded-sm mb-4'
                             fullWidth
                             type="submit">
 
@@ -124,8 +124,8 @@ const RegisterPage = () => {
                         <Button
                             fullWidth
                             type="reset"
-                            variant="secondary"
-                            className='py-6 rounded-sm mb-4'
+                            variant="outline"
+                            className='py-4 rounded-sm mb-4'
                         >
                             Reset
                         </Button>
@@ -136,7 +136,7 @@ const RegisterPage = () => {
                     Or
                 </p>
                 <Button
-                    className='py-6 rounded-sm mb-4'
+                    className='py-4 rounded-sm mb-4'
                     onClick={handleGoogleSignIn}
                     fullWidth
                     variant="outline">
