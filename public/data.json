@@ -6,7 +6,7 @@
     "duration": "20 hours",
     "rating": 4.8,
     "level": "Beginner",
-    "description": "Learn full-stack web development from scratch.",
+    "description": "Learn full-stack web development from scratch, including HTML, CSS, JavaScript, React, Node.js, and databases. This course will guide you step by step to build real-world projects and become a job-ready web developer.",
     "image": "https://i.ibb.co.com/vCWXBc8t/Complete-Web-Development-Bootcamp.jpg",
     "category": "Development"
   },
@@ -17,7 +17,7 @@
     "duration": "15 hours",
     "rating": 4.7,
     "level": "Intermediate",
-    "description": "Deep dive into modern JavaScript concepts.",
+    "description": "Deep dive into modern JavaScript concepts including closures, prototypes, async/await, ES6+, and design patterns. Perfect for developers who want to strengthen their core JavaScript skills and write efficient, scalable code.",
     "image": "https://i.ibb.co.com/vCWXBc8t/Complete-Web-Development-Bootcamp.jpg",
     "category": "Development"
   },
@@ -28,7 +28,7 @@
     "duration": "12 hours",
     "rating": 4.6,
     "level": "Beginner",
-    "description": "Learn the basics of user interface and experience design.",
+    "description": "Learn the fundamentals of UI/UX design, including user research, wireframing, prototyping, and usability principles. This course helps you create intuitive and visually appealing user experiences.",
     "image": "https://i.ibb.co.com/vCWXBc8t/Complete-Web-Development-Bootcamp.jpg",
     "category": "Design"
   },
@@ -39,7 +39,7 @@
     "duration": "18 hours",
     "rating": 4.9,
     "level": "Intermediate",
-    "description": "Build powerful web apps using React.",
+    "description": "Master React.js by building dynamic and high-performance web applications. Learn components, hooks, state management, routing, and best practices to develop modern frontend applications.",
     "image": "https://i.ibb.co.com/vCWXBc8t/Complete-Web-Development-Bootcamp.jpg",
     "category": "Development"
   },
@@ -50,7 +50,7 @@
     "duration": "22 hours",
     "rating": 4.8,
     "level": "Beginner",
-    "description": "Analyze data and build models using Python.",
+    "description": "Learn how to analyze data, visualize insights, and build predictive models using Python. Covers libraries like NumPy, Pandas, Matplotlib, and basic machine learning concepts.",
     "image": "https://i.ibb.co.com/vCWXBc8t/Complete-Web-Development-Bootcamp.jpg",
     "category": "Data Science"
   },
@@ -61,7 +61,7 @@
     "duration": "10 hours",
     "rating": 4.5,
     "level": "Beginner",
-    "description": "Master SEO, social media, and online marketing strategies.",
+    "description": "Master the fundamentals of digital marketing including SEO, social media marketing, content strategy, and online advertising. Learn how to grow businesses and reach audiences effectively.",
     "image": "https://i.ibb.co.com/vCWXBc8t/Complete-Web-Development-Bootcamp.jpg",
     "category": "Marketing"
   },
@@ -72,7 +72,7 @@
     "duration": "16 hours",
     "rating": 4.7,
     "level": "Intermediate",
-    "description": "Build scalable backend applications using Node.js.",
+    "description": "Build scalable backend applications using Node.js, Express, and REST APIs. Learn authentication, database integration, and deployment strategies for production-ready apps.",
     "image": "https://i.ibb.co.com/vCWXBc8t/Complete-Web-Development-Bootcamp.jpg",
     "category": "Development"
   },
@@ -83,7 +83,7 @@
     "duration": "14 hours",
     "rating": 4.6,
     "level": "Beginner",
-    "description": "Learn Photoshop, Illustrator, and design principles.",
+    "description": "Learn graphic design from scratch using tools like Photoshop and Illustrator. Understand typography, color theory, branding, and create professional design projects.",
     "image": "https://i.ibb.co.com/vCWXBc8t/Complete-Web-Development-Bootcamp.jpg",
     "category": "Design"
   },
@@ -94,7 +94,7 @@
     "duration": "25 hours",
     "rating": 4.9,
     "level": "Advanced",
-    "description": "Master machine learning algorithms and techniques.",
+    "description": "Master machine learning algorithms, including regression, classification, clustering, and deep learning basics. Build real-world models and understand how AI systems work.",
     "image": "https://i.ibb.co.com/vCWXBc8t/Complete-Web-Development-Bootcamp.jpg",
     "category": "Data Science"
   },
@@ -105,7 +105,7 @@
     "duration": "17 hours",
     "rating": 4.7,
     "level": "Intermediate",
-    "description": "Create cross-platform mobile apps using Flutter.",
+    "description": "Learn to build beautiful and high-performance cross-platform mobile apps using Flutter and Dart. Covers UI design, state management, API integration, and app deployment.",
     "image": "https://i.ibb.co.com/vCWXBc8t/Complete-Web-Development-Bootcamp.jpg",
     "category": "Development"
   }

@@ -14,7 +14,7 @@ const CoursesDetailsPage = async ({ params }) => {
         <Card className="w-11/12 mx-auto mt-10 p-5 flex flex-col  md:flex-row">
             <img
                 src={course.image}
-                className='md:w-100 rounded-xl' alt="" />
+                className='md:w-70 rounded-xl' alt="" />
             <Card.Header>
                 <Card.Title
                     className='font-medium md:font-semibold text-lg md:text-xl text-[#313131] mb-4'>{course.title}</Card.Title>
