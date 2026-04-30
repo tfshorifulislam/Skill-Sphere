@@ -6,10 +6,11 @@ import { IoStar } from "react-icons/io5";
 const CoursesCard = ({ course }) => {
     console.log(course)
     const { instructor, image, rating, title , category} = course;
+    console.log(course)
     return (
         <div className="shadow-sm p-5 rounded-xl bg-white">
             <div className="relative">
-                <img
+                <Image
                     className="rounded-xl"
                     width={500}
                     height={500}

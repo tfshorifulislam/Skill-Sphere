@@ -103,7 +103,7 @@ const Footer = () => {
                             className="h-32 "
                             placeholder="Share your feedback"
                         />
-                        <Button>
+                        <Button fullWidth>
                             Submit
                         </Button>
                     </div>

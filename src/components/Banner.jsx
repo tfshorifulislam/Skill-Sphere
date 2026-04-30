@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const Banner = () => {
     return (
-        <div className="mt-10 md:mt-20 pt-3 bg-white ">
+        <div className="mt-10 md:mt-20 pt-3 bg-[#136E61] ">
             <div
                 className="mx-auto w-11/12 md:w-9/12 flex flex-col md:flex-row items-center justify-between">
                 <div className="md:max-w-2xl text-[#1e1e1e] text-center md:text-start animate__animated animate__fadeInLeft">
