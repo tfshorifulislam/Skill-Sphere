@@ -9,6 +9,7 @@ import {
     Form,
     Input,
     Label,
+    Separator,
     TextField,
 } from "@heroui/react";
 import { GrGoogle } from "react-icons/gr";
@@ -41,14 +42,13 @@ export default function SignInPage() {
 
 
     return (
-        <div className="px-5 h-[50vh] flex justify-center items-center">
-            <Card className="border mx-auto">
+        <div className="px-5 mt-10 flex justify-center items-center">
+            <Card className="">
                 <h1 className="text-center text-2xl font-bold">Login</h1>
 
-                <Form className="flex  mx-auto flex-col gap-4" onSubmit={onSubmit}>
-
-
+                <Form className="flex   flex-col gap-4" onSubmit={onSubmit}>
                     <TextField
+
                         isRequired
                         name="email"
                         type="email"
@@ -61,7 +61,9 @@ export default function SignInPage() {
                         }}
                     >
                         <Label>Email</Label>
-                        <Input placeholder="john@example.com" />
+                        <Input placeholder="Enter your Email"
+                            className='py-5 bg-transparent rounded-sm'
+                        />
                         <FieldError />
                     </TextField>
 
@@ -85,26 +87,31 @@ export default function SignInPage() {
                         }}
                     >
                         <Label>Password</Label>
-                        <Input placeholder="Enter your password" />
+                        <Input
+                            className='py-5 bg-transparent mb-3rounded-sm'
+                            placeholder="Enter your password" />
                         <Description>
                             Must be at least 8 characters with 1 uppercase and 1 number
                         </Description>
                         <FieldError />
                     </TextField>
 
-                    <div className="flex gap-2">
-                        <Button type="submit">
+                    <div className="flex gap-2 w-full">
+                        <Button fullWidth type="submit"
+                            className='py-6 rounded-sm my-5'>
                             <Check />
                             Submit
                         </Button>
                     </div>
+                    <Separator />
                 </Form>
                 <p className="flex justify-center">
                     Or
                 </p>
                 <Button
+                    fullWidth
                     onClick={handleGoogleSignIn}
-                    className={`w-full`}
+                    className='py-6 rounded-sm mb-4'
                     variant="outline">
                     <GrGoogle />
                     Login With Google

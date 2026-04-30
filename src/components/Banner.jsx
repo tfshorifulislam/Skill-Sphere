@@ -10,11 +10,11 @@ const Banner = () => {
             <div
                 className="mx-auto w-11/12 md:w-9/12 flex flex-col md:flex-row items-center justify-between">
                 <div className="md:max-w-2xl text-[#1e1e1e] text-center md:text-start animate__animated animate__fadeInLeft">
-                    <h1 className="text-2xl md:text-6xl font-semibold  md:font-bold mb-5 md:leading-20 ">
+                    <h1 className="text-3xl md:text-6xl font-semibold  md:font-bold mb-5 md:leading-20 ">
                         Upgrade <span className="text-blue-800">Your Skills</span> Today
                     </h1>
 
-                    <p className="mb-4 text-sm md:text-lg leading-8 opacity-60 ">
+                    <p className="mb-4 text-sm md:text-lg leading-6 md:leading-8 opacity-60 ">
                         Upgrade your skills today and unlock new opportunities for growth, success, and a brighter future—start learning something new now!
                     </p>
                     <Link href="/courses">
