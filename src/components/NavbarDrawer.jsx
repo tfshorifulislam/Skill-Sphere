@@ -24,21 +24,9 @@ export function NavbarDrawer() {
             <Drawer.Backdrop isOpen={isOpen} onOpenChange={setIsOpen}>
                 <Drawer.Content placement="right">
                     <Drawer.Dialog>
+                       <Drawer.Header>
+                        <Drawer.Heading>Profile</Drawer.Heading>
                         <div>
-                            {/* <ul className="flex flex-col space-y-3 text-xl">
-                                <li className="bg-[#f2f2f2] shadow-sm flex items-center gap-3 pl-5 py-3 rounded-2xl">
-                                    <FaHome className="text-2xl" />
-                                    <Link href={'/'}>Home</Link>
-                                </li>
-                                <li className="bg-[#f2f2f2] shadow-sm flex items-center gap-3 pl-5 py-3 rounded-2xl">
-                                    <FaBookReader />
-                                    <Link href={'/'}>Courses</Link>
-                                </li>
-                                <li className="bg-[#f2f2f2] shadow-sm flex items-center gap-3 pl-5 py-3 rounded-2xl">
-                                    <CgProfile />
-                                    <Link href={'/'}>My Profile</Link>
-                                </li>
-                            </ul> */}
                             {!user && <div className="w-full space-y-5 flex flex-col">
                                 <Link href={'/login'}>
                                     <Button variant="primary" className='w-full' >Login</Button>
@@ -53,7 +41,19 @@ export function NavbarDrawer() {
                                 </Link>
 
                             </div>}
+                            {user && <ul className="flex flex-col space-y-3">
+                                <Button className=" w-full" variant="outline">
+                                    <Link href={'/'}>Home</Link>
+                                </Button>
+                                <Button className=" w-full" variant="outline">
+                                    <Link href={'/courses'}>Courses</Link>
+                                </Button>
+                                <Button className=" w-full" variant="outline">
+                                    <Link href={'/profile'}>My Profile</Link>
+                                </Button>
+                            </ul>}
                         </div>
+                       </Drawer.Header>
                     </Drawer.Dialog>
                 </Drawer.Content>
             </Drawer.Backdrop>
