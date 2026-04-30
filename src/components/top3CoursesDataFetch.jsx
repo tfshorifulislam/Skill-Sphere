@@ -6,8 +6,8 @@ const Top3Courses = async () => {
     const courses = await res.json();
     const topCourses = courses.sort((a, b) => b.rating - a.rating).slice(0, 3)
     return (
-        <div className='mt-20 space-y-8 h-screen'>
-            <h1 className='flex justify-center font-bold text-5xl mb-17'>
+        <div className='mt-5 md:mt-20 space-y-3 md:space-y-8 '>
+            <h1 className='flex justify-center text-center font-semibold text-2xl md:text-5xl mb-5 md:mb-17'>
                 Top Courses
             </h1>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-5 mx-auto w-11/12 '>
