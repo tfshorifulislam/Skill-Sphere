@@ -1,12 +1,14 @@
 'use client'
-import React from 'react';
 
 import { Button, Card, Description, FieldError, Form, Input, Label, TextField } from '@heroui/react';
 import { authClient } from '@/lib/auth-client';
+import { useRouter } from 'next/navigation';
+
 
 
 const RegisterPage = () => {
-
+    
+    const router = useRouter()
     const onSubmit = async (e) => {
         e.preventDefault();
 
