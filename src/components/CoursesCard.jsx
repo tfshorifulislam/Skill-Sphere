@@ -9,7 +9,7 @@ const CoursesCard = ({ course }) => {
     return (
         <div className="shadow-sm p-5 rounded-xl bg-white">
             <div className="relative">
-                <Image
+                <img
                     className="rounded-xl"
                     width={500}
                     height={500}

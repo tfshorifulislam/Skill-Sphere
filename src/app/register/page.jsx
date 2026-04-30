@@ -3,11 +3,12 @@
 import { Button, Card, Description, FieldError, Form, Input, Label, TextField } from '@heroui/react';
 import { authClient } from '@/lib/auth-client';
 import { useRouter } from 'next/navigation';
+import { GrGoogle } from 'react-icons/gr';
 
 
 
 const RegisterPage = () => {
-    
+
     const router = useRouter()
     const onSubmit = async (e) => {
         e.preventDefault();
@@ -30,9 +31,16 @@ const RegisterPage = () => {
         }
     }
 
+
+    const handleGoogleSignIn = async () => {
+        await authClient.signIn.social({
+            provider: "google",
+        });
+    }
+
     return (
         <Card className="border mx-auto w-125 py-10 mt-10">
-            <h1 className="text-center text-2xl font-bold">Sign Up</h1>
+            <h1 className="text-center text-2xl font-bold">Register</h1>
 
             <Form className="flex w-96 mx-auto flex-col gap-4" onSubmit={onSubmit}>
                 <TextField isRequired
@@ -106,7 +114,16 @@ const RegisterPage = () => {
                     </Button>
                 </div>
             </Form>
-
+            <p className="flex justify-center">
+                Or
+            </p>
+            <Button
+                onClick={handleGoogleSignIn}
+                className={`w-full`}
+                variant="outline">
+                <GrGoogle />
+                Register With Google
+            </Button>
         </Card>
     );
 };
