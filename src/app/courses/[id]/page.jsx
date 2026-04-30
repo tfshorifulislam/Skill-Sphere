@@ -3,6 +3,7 @@ import React from 'react';
 import { Card, Chip, Separator, } from '@heroui/react';
 import Link from 'next/link';
 import { IoStar, IoTime } from 'react-icons/io5';
+import Image from 'next/image';
 const CoursesDetailsPage = async ({ params }) => {
     const { id } = await params;
     console.log(id)
@@ -12,7 +13,7 @@ const CoursesDetailsPage = async ({ params }) => {
     console.log(course)
     return (
         <Card className="w-11/12 mx-auto mt-10 p-5 flex flex-col  md:flex-row">
-            <img
+            <Image
                 src={course.image}
                 className='md:w-70 rounded-xl' alt="" />
             <Card.Header>

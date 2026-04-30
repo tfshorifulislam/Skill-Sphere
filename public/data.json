@@ -7,7 +7,7 @@
     "rating": 4.8,
     "level": "Beginner",
     "description": "Learn full-stack web development from scratch, including HTML, CSS, JavaScript, React, Node.js, and databases. This course will guide you step by step to build real-world projects and become a job-ready web developer.",
-    "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1172&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "image": "https://images.unsplash.com/photo-1629904853893-c2c8981a1dc5?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "category": "Development"
   },
   {
@@ -18,7 +18,7 @@
     "rating": 4.7,
     "level": "Intermediate",
     "description": "Deep dive into modern JavaScript concepts including closures, prototypes, async/await, ES6+, and design patterns. Perfect for developers who want to strengthen their core JavaScript skills and write efficient, scalable code.",
-    "image": "https://imgur.com/a/2dtgcgi",
+    "image": "https://images.unsplash.com/photo-1619410283995-43d9134e7656?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "category": "Development"
   },
   {
@@ -29,7 +29,7 @@
     "rating": 4.6,
     "level": "Beginner",
     "description": "Learn the fundamentals of UI/UX design, including user research, wireframing, prototyping, and usability principles. This course helps you create intuitive and visually appealing user experiences.",
-    "image": "https://imgur.com/a/2dtgcgi",
+    "image": "https://images.unsplash.com/photo-1586296835409-fe3fe6b35b56?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "category": "Design"
   },
   {
@@ -40,7 +40,7 @@
     "rating": 4.9,
     "level": "Intermediate",
     "description": "Master React.js by building dynamic and high-performance web applications. Learn components, hooks, state management, routing, and best practices to develop modern frontend applications.",
-    "image": "https://imgur.com/a/2dtgcgi",
+    "image": "https://images.unsplash.com/photo-1672309046475-4cce2039f342?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "category": "Development"
   },
   {
@@ -51,7 +51,7 @@
     "rating": 4.8,
     "level": "Beginner",
     "description": "Learn how to analyze data, visualize insights, and build predictive models using Python. Covers libraries like NumPy, Pandas, Matplotlib, and basic machine learning concepts.",
-    "image": "https://imgur.com/a/2dtgcgi",
+    "image": "https://images.unsplash.com/photo-1573496528681-9b0f4fb0c660?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "category": "Data Science"
   },
   {
@@ -62,7 +62,7 @@
     "rating": 4.5,
     "level": "Beginner",
     "description": "Master the fundamentals of digital marketing including SEO, social media marketing, content strategy, and online advertising. Learn how to grow businesses and reach audiences effectively.",
-    "image": "https://imgur.com/a/2dtgcgi",
+    "image": "https://images.unsplash.com/photo-1667039487297-be4ae76e6df1?q=80&w=1112&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "category": "Marketing"
   },
   {
@@ -73,7 +73,7 @@
     "rating": 4.7,
     "level": "Intermediate",
     "description": "Build scalable backend applications using Node.js, Express, and REST APIs. Learn authentication, database integration, and deployment strategies for production-ready apps.",
-    "image": "https://imgur.com/a/2dtgcgi",
+    "image": "https://images.unsplash.com/photo-1774901128283-64c62117216a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "category": "Development"
   },
   {
@@ -84,7 +84,7 @@
     "rating": 4.6,
     "level": "Beginner",
     "description": "Learn graphic design from scratch using tools like Photoshop and Illustrator. Understand typography, color theory, branding, and create professional design projects.",
-    "image": "https://imgur.com/a/2dtgcgi",
+    "image": "https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "category": "Design"
   },
   {
@@ -95,7 +95,7 @@
     "rating": 4.9,
     "level": "Advanced",
     "description": "Master machine learning algorithms, including regression, classification, clustering, and deep learning basics. Build real-world models and understand how AI systems work.",
-    "image": "https://imgur.com/a/2dtgcgi",
+    "image": "https://images.unsplash.com/photo-1591696331111-ef9586a5b17a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "category": "Data Science"
   },
   {
@@ -106,7 +106,7 @@
     "rating": 4.7,
     "level": "Intermediate",
     "description": "Learn to build beautiful and high-performance cross-platform mobile apps using Flutter and Dart. Covers UI design, state management, API integration, and app deployment.",
-    "image": "https://imgur.com/a/2dtgcgi",
+    "image": "https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "category": "Development"
   }
 ]
