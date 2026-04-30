@@ -1,34 +1,36 @@
-import { Button } from "@heroui/react";
+import { Button, Chip } from "@heroui/react";
 import Link from "next/link";
-import { FcRating } from "react-icons/fc";
+import { IoStar } from "react-icons/io5";
 
 const CoursesCard = ({ course }) => {
     console.log(course)
-    const { instructor, image, rating, title } = course;
+    const { instructor, image, rating, title , category} = course;
     return (
-        <div className="border shadow-sm p-5 rounded-xl bg-white">
-            <img
-                className="rounded-xl"
-                src={image}
-                alt={title} />
+        <div className="shadow-sm p-5 rounded-xl bg-white">
+            <div className="relative">
+                <img
+                    className="rounded-xl"
+                    src={image}
+                    alt={title} />
+                    <Chip className="absolute bottom-2 right-2">{category}</Chip>
+            </div>
             <div>
-                <h1 className="font-semibold md:font-bold mt-5 text-lg md:text-2xl ">
+                <h1 className="font-medium text-[#343434] md:font-semibold mt-5  md:text-lg ">
                     {title}
                 </h1>
             </div>
             <div className="flex  justify-between">
-                <p className=" mt-2">
+                <p className=" text-[#5e5e5e] mt-2">
                     instructor: {instructor}
                 </p>
-                <p className="font-medium mt-2 flex gap-1 items-center">
-                    <FcRating /> {rating}
+                <p className="font-medium mt-2 text-[#5e5e5e] justify-center flex gap-1 items-center">
+                    <IoStar /> {rating}
                 </p>
             </div>
 
 
             <Link href={`/courses/${course.id}`}>
                 <Button
-                    variant="outline"
                     className='w-full mt-8'>
                     View Details
                 </Button>
