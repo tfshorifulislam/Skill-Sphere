@@ -18,7 +18,7 @@ export function NavbarDrawer() {
     return (
         <div>
 
-            <Button size="sm" onPress={() => setIsOpen(!isOpen)}>
+            <Button variant="" size="sm" onPress={() => setIsOpen(!isOpen)}>
                 <RxHamburgerMenu />
             </Button>
             <Drawer.Backdrop isOpen={isOpen} onOpenChange={setIsOpen}>
@@ -42,13 +42,13 @@ export function NavbarDrawer() {
 
                             </div>}
                             {user && <ul className="flex flex-col space-y-3">
-                                <Button className=" w-full" variant="outline">
+                                <Button className=" w-full rounded-lg" variant="outline">
                                     <Link href={'/'}>Home</Link>
                                 </Button>
-                                <Button className=" w-full" variant="outline">
+                                <Button className=" w-full rounded-lg" variant="outline">
                                     <Link href={'/courses'}>Courses</Link>
                                 </Button>
-                                <Button className=" w-full" variant="outline">
+                                <Button className=" w-full rounded-lg" variant="outline">
                                     <Link href={'/profile'}>My Profile</Link>
                                 </Button>
                             </ul>}
