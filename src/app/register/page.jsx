@@ -39,17 +39,17 @@ const RegisterPage = () => {
     }
 
     return (
-        <div className="px-5 mt-10 flex justify-center items-center">
-            <Card className="border mx-auto">
+        <div className="px-5 mt-10 flex justify-center items-center animate__animated animate__fadeInLeft">
+            <Card className="max-w-5xl mx-auto rounded-md">
                 <h1 className="text-center text-2xl font-bold">Register</h1>
 
-                <Form className="flex mx-auto flex-col gap-4" onSubmit={onSubmit}>
+                <Form className="flex  flex-col gap-4" onSubmit={onSubmit}>
                     <TextField isRequired
                         name="name"
                         type="text">
                         <Label>Name</Label>
                         <Input
-                            className='py-3 bg-transparent rounded-sm'
+                            className='py-3  rounded-sm'
                             placeholder="Enter your name" />
                         <FieldError />
                     </TextField>
@@ -60,7 +60,7 @@ const RegisterPage = () => {
                         type="text">
                         <Label>Image URL</Label>
                         <Input
-                            className='py-3 bg-transparent rounded-sm'
+                            className='py-3 rounded-sm'
                             placeholder="Image URL" />
                         <FieldError />
                     </TextField>
@@ -79,8 +79,8 @@ const RegisterPage = () => {
                     >
                         <Label>Email</Label>
                         <Input
-                            className='py-3 bg-transparent rounded-sm'
-                            placeholder="john@example.com" />
+                            className='py-3 rounded-sm'
+                            placeholder="Enter your Email" />
                         <FieldError />
                     </TextField>
 
@@ -105,7 +105,7 @@ const RegisterPage = () => {
                     >
                         <Label>Password</Label>
                         <Input
-                            className='py-3 bg-transparent rounded-sm'
+                            className='py-3 rounded-sm'
                             placeholder="Enter your password" />
                         <Description>
                             Must be at least 8 characters with 1 uppercase and 1 number
@@ -115,7 +115,7 @@ const RegisterPage = () => {
 
                     <div className="flex flex-col gap-2">
                         <Button
-                            className='py-4 rounded-sm mb-4'
+                            className='py-4 rounded-sm mb-2'
                             fullWidth
                             type="submit">
 
@@ -125,13 +125,13 @@ const RegisterPage = () => {
                             fullWidth
                             type="reset"
                             variant="outline"
-                            className='py-4 rounded-sm mb-4'
+                            className='py-4 rounded-sm'
                         >
                             Reset
                         </Button>
                     </div>
                 </Form>
-                <Separator className='mt-5' />
+                <Separator className='mt-4' />
                 <p className="flex justify-center">
                     Or
                 </p>

@@ -42,11 +42,11 @@ export default function SignInPage() {
 
 
     return (
-        <div className="px-5 mt-10 flex justify-center items-center">
-            <Card className="">
+        <div className="px-5 mt-10 flex justify-center items-center animate__animated animate__fadeInRight">
+            <Card className="max-w-5xl mx-auto rounded-md">
                 <h1 className="text-center text-2xl font-bold">Login</h1>
 
-                <Form className="flex   flex-col gap-4" onSubmit={onSubmit}>
+                <Form className="flex flex-col gap-4" onSubmit={onSubmit}>
                     <TextField
 
                         isRequired
@@ -96,11 +96,19 @@ export default function SignInPage() {
                         <FieldError />
                     </TextField>
 
-                    <div className="flex gap-2 w-full">
+                    <div className="flex flex-col gap-2">
                         <Button fullWidth type="submit"
                             className='py-4 rounded-sm '>
                             <Check />
                             Submit
+                        </Button>
+                        <Button
+                            fullWidth
+                            type="reset"
+                            variant="outline"
+                            className='py-4 rounded-sm'
+                        >
+                            Reset
                         </Button>
                     </div>
                     <Separator />
