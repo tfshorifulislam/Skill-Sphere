@@ -8,7 +8,7 @@ import { authClient } from "@/lib/auth-client";
 
 const Navbar = () => {
     const userData = authClient.useSession()
-    const user = userData.data?.user
+    const user = userData?.data?.user
     console.log(user)
     return (
         <div className="bg-white w-full py-3 shadow-sm">
