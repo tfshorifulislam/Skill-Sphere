@@ -1,23 +1,37 @@
 import { Button } from "@heroui/react";
+import Image from "next/image";
 import Link from "next/link";
+
+
 
 const Banner = () => {
     return (
-        <div className=" mt-5 md:mt-20 bg-[url('/slide01.jpg')] h-[70vh] w-full bg-cover bg-no-repeat bg-center flex items-center shadow-2xl">
-            {/* Overlay */}
-            <div className="w-full h-full bg-black/80 flex items-center text-center">
-                <div className="max-w-7xl mx-auto px-1 md:px-6 text-white">
-                    <h1 className="text-2xl md:text-6xl font-bold max-w-2xl mb-5 md:leading-20">
-                        Upgrade Your Skills Today
+        <div className="mt-10 md:mt-20 pt-3 bg-white ">
+            <div
+                className="mx-auto w-11/12 md:w-9/12 flex flex-col md:flex-row items-center justify-between">
+                <div className="md:max-w-2xl text-[#1e1e1e] text-center md:text-start animate__animated animate__fadeInLeft">
+                    <h1 className="text-2xl md:text-6xl font-semibold  md:font-bold mb-5 md:leading-20 ">
+                        Upgrade <span className="text-blue-800">Your Skills</span> Today
                     </h1>
-                    <p className="mb-4 max-w-2xl leading-8">
+
+                    <p className="mb-4 text-sm md:text-lg leading-8 opacity-60 ">
                         Upgrade your skills today and unlock new opportunities for growth, success, and a brighter future—start learning something new now!
                     </p>
                     <Link href="/courses">
-                        <Button className="text-white">
+                        <Button className="text-white md:rounded-md md:py-6">
                             View all Courses
                         </Button>
                     </Link>
+                </div>
+                <div className="animate__animated animate__fadeInDown">
+                    <Image
+                        sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+                        width={600}
+                        height={600}
+                        src='/man.png'
+                        alt="to">
+
+                    </Image>
                 </div>
             </div>
         </div>
