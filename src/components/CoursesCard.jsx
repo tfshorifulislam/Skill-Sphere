@@ -1,10 +1,10 @@
 import { Button } from "@heroui/react";
-import Image from "next/image";
+import Link from "next/link";
 import { FcRating } from "react-icons/fc";
 
 const CoursesCard = ({ course }) => {
     console.log(course)
-    const { category, instructor, description, image, rating, title } = course;
+    const { instructor, image, rating, title } = course;
     return (
         <div className="border shadow-sm p-5 rounded-xl bg-white">
             <img
@@ -26,7 +26,13 @@ const CoursesCard = ({ course }) => {
             </div>
 
 
-            <Button variant="outline" className='w-full mt-8'>View Details</Button>
+            <Link href={`/courses/${course.id}`}>
+                <Button
+                    variant="outline"
+                    className='w-full mt-8'>
+                    View Details
+                </Button>
+            </Link>
         </div>
     );
 };
