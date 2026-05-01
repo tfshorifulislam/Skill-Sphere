@@ -15,51 +15,115 @@ export function NavbarDrawer() {
     const user = userData.data?.user
     console.log(user)
 
+    const handleSignOut = async () => {
+        await authClient.signOut();
+    }
+
     return (
         <div>
 
-            <Button variant="" size="sm" onPress={() => setIsOpen(!isOpen)}>
+            {/* Toggle button */}
+            <Button
+                size="sm"
+                variant="light"
+                onPress={() => setIsOpen(!isOpen)}
+                className="text-xl"
+            >
                 <RxHamburgerMenu />
             </Button>
+
             <Drawer.Backdrop isOpen={isOpen} onOpenChange={setIsOpen}>
                 <Drawer.Content placement="right">
                     <Drawer.Dialog>
-                        <Drawer.Header>
-                            <Drawer.Heading>Profile</Drawer.Heading>
-                            <div>
-                                {!user && <div className="w-full space-y-5 flex flex-col">
-                                    <Link href={'/login'}>
-                                        <Button variant="primary" className='w-full rounded-lg bg-[#5D38DE]' >Login</Button>
-                                    </Link>
-                                    <Link href={'/register'}>
-                                        <Button variant="outline" className='w-full rounded-lg' >Register</Button>
-                                    </Link>
-                                </div>}
-                                {user && <div className="px-5">
-                                    <Link href={'/login'}>
-                                        <Button variant="danger" className=' absolute bottom-5 right-5 '>Logout</Button>
+
+                        {/* HEADER */}
+                        <Drawer.Header className="border-b pb-4">
+                            <Drawer.Heading className="text-lg font-semibold">
+                                Menu
+                            </Drawer.Heading>
+                        </Drawer.Header>
+
+                        {/* BODY */}
+                        <div className="p-5 space-y-6">
+
+                            {/* AUTH SECTION */}
+                            {!user && (
+                                <div className="space-y-3">
+
+                                    <Link href="/login">
+                                        <Button className="w-full bg-[#5D38DE] text-white rounded-xl py-5 hover:bg-[#4c2fc2] transition">
+                                            Login
+                                        </Button>
                                     </Link>
 
-                                </div>}
-                                {user && <ul className="flex flex-col space-y-3">
+                                    <Link href="/register">
+                                        <Button
+                                            variant="bordered"
+                                            className="w-full rounded-xl py-5"
+                                        >
+                                            Register
+                                        </Button>
+                                    </Link>
+
+                                </div>
+                            )}
+
+                            {/* NAV LINKS */}
+                            {user && (
+                                <div className="space-y-3">
+
+                                    <Link href="/">
+                                        <Button
+                                            onClick={() => setIsOpen(false)}
+                                            variant="light"
+                                            className="w-full justify-start rounded-xl py-5 hover:bg-gray-100"
+                                        >
+                                            Home
+                                        </Button>
+                                    </Link>
+
+                                    <Link href="/courses">
+                                        <Button
+                                            onClick={() => setIsOpen(false)}
+                                            variant="light"
+                                            className="w-full justify-start rounded-xl py-5 hover:bg-gray-100"
+                                        >
+                                            Courses
+                                        </Button>
+                                    </Link>
+
+                                    <Link href="/profile">
+                                        <Button
+                                            onClick={() => setIsOpen(false)}
+                                            variant="light"
+                                            className="w-full justify-start rounded-xl py-5 hover:bg-gray-100"
+                                        >
+                                            My Profile
+                                        </Button>
+                                    </Link>
+
+                                </div>
+                            )}
+
+                        </div>
+
+                        {/* FOOTER (Logout fixed bottom) */}
+                        {user && (
+                            <div className="absolute bottom-5 left-0 w-full px-5">
+
+                                <Link href={'/login'}>
                                     <Button
-                                        onClick={() => setIsOpen(false)}
-                                        className=" w-full rounded-lg" variant="outline">
-                                        <Link href={'/'}>Home</Link>
+
+                                        onClick={handleSignOut}
+                                        className="w-full bg-red-500 text-white rounded-xl py-5 hover:bg-red-600 transition"
+                                    >
+                                        Logout
                                     </Button>
-                                    <Button
-                                        onClick={() => setIsOpen(false)}
-                                        className=" w-full rounded-lg" variant="outline">
-                                        <Link href={'/courses'}>Courses</Link>
-                                    </Button>
-                                    <Button
-                                        onClick={() => setIsOpen(false)}
-                                        className=" w-full rounded-lg" variant="outline">
-                                        <Link href={'/profile'}>My Profile</Link>
-                                    </Button>
-                                </ul>}
+                                </Link>
+
                             </div>
-                        </Drawer.Header>
+                        )}
+
                     </Drawer.Dialog>
                 </Drawer.Content>
             </Drawer.Backdrop>
