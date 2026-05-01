@@ -98,7 +98,7 @@ export default function SignInPage() {
 
                     <div className="flex flex-col gap-2">
                         <Button fullWidth type="submit"
-                            className='py-4 rounded-sm '>
+                            className='py-4 bg-[#5D38DE] rounded-sm '>
                             <Check />
                             Submit
                         </Button>
@@ -119,9 +119,9 @@ export default function SignInPage() {
                 <Button
                     fullWidth
                     onClick={handleGoogleSignIn}
-                    className='py-4 rounded-sm mb-4'
+                    className='py-4 rounded-sm mb-4 text-[#5D38DE]'
                     variant="outline">
-                    <GrGoogle />
+                    <GrGoogle className="" />
                     Login With Google
                 </Button>
             </Card>

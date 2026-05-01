@@ -103,7 +103,7 @@ const Footer = () => {
                             className="h-32 "
                             placeholder="Share your feedback"
                         />
-                        <Button fullWidth>
+                        <Button fullWidth className='bg-[#5D38DE] rounded-lg'>
                             Submit
                         </Button>
                     </div>

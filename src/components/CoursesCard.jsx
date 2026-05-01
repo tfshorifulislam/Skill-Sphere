@@ -16,10 +16,10 @@ const CoursesCard = ({ course }) => {
                     fill
                     src={image}
                     alt={title} />
-                <Chip className="absolute bottom-2 right-2">{category}</Chip>
+                <Chip className="absolute bottom-2 right-2 ">{category}</Chip>
             </div>
             <div>
-                <h1 className="font-medium text-[#343434] md:font-semibold mt-5  md:text-lg ">
+                <h1 className="font-medium text-[#5D38DE] md:font-semibold mt-5  md:text-lg line-clamp-1">
                     {title}
                 </h1>
             </div>
@@ -36,7 +36,7 @@ const CoursesCard = ({ course }) => {
             <Link href={`/courses/${course.id}`}>
                 <Button
                 size="sm"
-                    className='w-full mt-8'>
+                    className='w-full mt-8 bg-[#5D38DE]'>
                     View Details
                 </Button>
             </Link>

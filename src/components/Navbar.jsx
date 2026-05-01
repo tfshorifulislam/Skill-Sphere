@@ -41,15 +41,15 @@ const Navbar = () => {
                 <div>
                     {!user && <div className="hidden md:flex gap-4">
                         <Link href={'/login'}>
-                            <Button variant="primary">Login</Button>
+                            <Button className='rounded-lg bg-[#5D38DE]' >Login</Button>
                         </Link>
                         <Link href={'/register'}>
-                            <Button variant="outline">Register</Button>
+                            <Button className='rounded-lg' variant="outline">Register</Button>
                         </Link>
                     </div>}
                     {user && <div className="hidden md:flex gap-4">
                         <Link href={'/login'}>
-                            <Button onClick={handleSignOut} variant="danger">Logout</Button>
+                            <Button className='rounded-lg' onClick={handleSignOut} variant="danger">Logout</Button>
                         </Link>
 
                     </div>}

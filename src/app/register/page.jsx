@@ -115,7 +115,7 @@ const RegisterPage = () => {
 
                     <div className="flex flex-col gap-2">
                         <Button
-                            className='py-4 rounded-sm mb-2'
+                            className='py-4 rounded-sm mb-2 bg-[#5D38DE]'
                             fullWidth
                             type="submit">
 
@@ -136,7 +136,7 @@ const RegisterPage = () => {
                     Or
                 </p>
                 <Button
-                    className='py-4 rounded-sm mb-4'
+                    className='py-4 rounded-sm mb-4 text-[#5D38DE]'
                     onClick={handleGoogleSignIn}
                     fullWidth
                     variant="outline">

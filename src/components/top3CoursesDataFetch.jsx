@@ -2,18 +2,19 @@ import React from 'react';
 import CoursesCard from './CoursesCard';
 import { Button } from '@heroui/react';
 import Link from 'next/link';
+import { Span } from 'next/dist/trace';
 
 const Top3Courses = async () => {
     const res = await fetch('https://skill-sphere-topaz.vercel.app/data.json');
     const courses = await res.json();
     const topCourses = courses.sort((a, b) => b.rating - a.rating).slice(0, 3)
     return (
-        <div className='mt-10 md:mt-20 mx-auto w-11/12 md:w-9/12'>
+        <div className='mt-10 md:mt-20 mx-auto w-11/12 md:w-7/12'>
             <div className='flex justify-between'>
                 <h1 className='font-semibold text-sm md:text-2xl'>
-                    Our Top Courses
+                    Our Top <span className='text-[#5D38DE]'>Courses</span>
                 </h1>
-                <Link href={'/courses'} className='text-sm md:text-md underline '>
+                <Link href={'/courses'} className='text-sm md:text-md underline text-[#5D38DE]'>
                     View all
                 </Link>
             </div>
