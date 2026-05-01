@@ -2,32 +2,56 @@ import React from 'react';
 import CoursesCard from './CoursesCard';
 import { Button } from '@heroui/react';
 import Link from 'next/link';
-import { Span } from 'next/dist/trace';
 
 const Top3Courses = async () => {
     const res = await fetch('https://skill-sphere-topaz.vercel.app/data.json');
     const courses = await res.json();
-    const topCourses = courses.sort((a, b) => b.rating - a.rating).slice(0, 3)
-    return (
-        <div className='mt-10 md:mt-20 mx-auto w-11/12 md:w-7/12'>
-            <div className='flex justify-between'>
-                <h1 className='font-semibold text-sm md:text-2xl'>
-                    Our Top <span className='text-[#5D38DE]'>Courses</span>
-                </h1>
-                <Link href={'/courses'} className='text-sm md:text-md underline text-[#5D38DE]'>
-                    View all
-                </Link>
-            </div>
-            <div className='grid grid-cols-1 md:grid-cols-3 space-y-8 md:space-y-0 md:gap-5  mt-5 animate__animated animate__fadeInDown '>
 
-                {
-                    topCourses.map(course =>
-                        <CoursesCard
-                            key={course.id}
-                            course={course} />)
-                }
+    const topCourses = courses
+        .sort((a, b) => b.rating - a.rating)
+        .slice(0, 3);
+
+    return (
+        <section className="mt-14 md:mt-24 bg-[#f8f9ff] py-10 md:py-16">
+
+            <div className="w-11/12 md:w-10/12 mx-auto">
+
+                {/* Header */}
+                <div className="flex items-end justify-between mb-8 md:mb-10">
+
+                    <div>
+                        <h2 className="text-xl md:text-3xl font-bold text-[#0f172a]">
+                            Our Top <span className="text-[#5D38DE]">Courses</span>
+                        </h2>
+
+                        <p className="text-gray-500 text-sm md:text-base mt-2">
+                            Most popular and highly rated courses by our students
+                        </p>
+
+                        <div className="w-16 h-1 bg-[#5D38DE] mt-3 rounded-full"></div>
+                    </div>
+
+                    <Link href="/courses">
+                        <Button
+                            variant="light"
+                            className="text-[#5D38DE] font-medium hover:bg-[#5D38DE]/10"
+                        >
+                            View All →
+                        </Button>
+                    </Link>
+                </div>
+
+                {/* Grid */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+                    {topCourses.map(course => (
+                        <CoursesCard key={course.id} course={course} />
+                    ))}
+
+                </div>
+
             </div>
-        </div>
+        </section>
     );
 };
 
