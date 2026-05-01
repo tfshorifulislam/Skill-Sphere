@@ -4,50 +4,71 @@ import Link from "next/link";
 import { IoStar, IoStarHalf, IoTime } from "react-icons/io5";
 
 const CoursesCard = ({ course }) => {
-    console.log(course)
-    const { instructor, image,duration, level, rating, title, category } = course;
-    console.log(course)
+    const { instructor, image, duration, level, rating, title, category, id } = course;
+
     return (
-        <div className="shadow-sm p-3 md:p-5 rounded-xl bg-white">
-            <div className="relative aspect-square">
+        <div className="group bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden">
+
+          
+            <div className="relative aspect-4/3 overflow-hidden">
                 <Image
-                    className="rounded-lg object-cover"
-                    sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+                    className="object-cover group-hover:scale-105 transition duration-300"
                     fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
                     src={image}
-                    alt={title} />
-                <Chip className="absolute bottom-2 right-2 ">{category}</Chip>
+                    alt={title}
+                />
+
+               
+                <Chip className="absolute top-3 left-3 bg-white/90 backdrop-blur text-xs">
+                    {category}
+                </Chip>
             </div>
-            <div>
-                <h1 className="font-medium text-[#5D38DE] md:font-semibold mt-5  md:text-lg line-clamp-1">
+
+           
+            <div className="p-4 md:p-5">
+
+                
+                <h2 className="font-semibold text-base md:text-lg text-[#111827] line-clamp-2">
                     {title}
-                </h1>
-            </div>
-            <div className="flex mt-2 justify-between items-center ">
-                <p className=" text-[#5e5e5e] mt-2">
-                    instructor: {instructor}
-                </p>
-                <Chip>{level}</Chip>
+                </h2>
 
-            </div>
-            <div className="flex font-medium gap-5 mt-5  text-lg text-[#1e1e1e]">
-                <p className=" flex gap-1 items-center ">
-                    <IoStarHalf  /> {rating}
-                </p>
-                <Separator orientation="vertical" />
-                <p className="flex gap-1 items-center ">
-                    <IoTime   /> {duration}
-                </p>
-            </div>
+               
+                <div className="flex justify-between items-center mt-3">
+                    <p className="text-sm text-gray-500 line-clamp-1">
+                        {instructor}
+                    </p>
+                    <Chip size="sm" variant="flat" color="secondary">
+                        {level}
+                    </Chip>
+                </div>
 
+               
+                <div className="flex items-center gap-4 mt-4 text-sm text-gray-700">
 
-            <Link href={`/courses/${course.id}`}>
-                <Button
-                    size="sm"
-                    className='w-full mt-8 rounded-lg bg-[#5D38DE]'>
-                    View Details
-                </Button>
-            </Link>
+                    <div className="flex items-center gap-1">
+                        <IoStar className="text-yellow-500" />
+                        <span>{rating}</span>
+                    </div>
+
+                    <Separator orientation="vertical" className="h-4" />
+
+                    <div className="flex items-center gap-1">
+                        <IoTime />
+                        <span>{duration}</span>
+                    </div>
+                </div>
+
+               
+                <Link href={`/courses/${id}`}>
+                    <Button
+                        size="sm"
+                        className="w-full mt-5 rounded-xl bg-[#5D38DE] hover:bg-[#4c2fc2] transition"
+                    >
+                        View Details
+                    </Button>
+                </Link>
+            </div>
         </div>
     );
 };
