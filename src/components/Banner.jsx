@@ -37,6 +37,7 @@ const Banner = () => {
                   
                     <div className="flex items-center justify-center md:justify-start gap-4 mb-6">
                         <Image
+                        sizes='(max-width: 768px) 100vw, 50vw'
                             width={110}
                             height={40}
                             src="/review.png"

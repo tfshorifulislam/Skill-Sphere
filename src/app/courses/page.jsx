@@ -8,7 +8,7 @@ const CoursesPage = async () => {
     return (
         <section className="bg-[#f8f9ff] min-h-screen py-10 md:py-16">
 
-            {/* Header */}
+           
             <div className="text-center mb-8 md:mb-12 px-4">
 
                 <h1 className="text-2xl md:text-4xl font-bold text-[#0f172a] mb-3">
@@ -20,11 +20,10 @@ const CoursesPage = async () => {
                     boost your career, and achieve your goals faster.
                 </p>
 
-                {/* optional divider */}
+                
                 <div className="w-20 h-1 bg-[#5D38DE] mx-auto mt-4 rounded-full"></div>
             </div>
 
-            {/* Grid */}
             <div className="w-11/12 md:w-10/12 mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
 
                 {courses.map(course => (
