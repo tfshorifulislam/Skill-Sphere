@@ -1,65 +1,80 @@
-'use client'
+'use client';
+
 import { Button } from "@heroui/react";
 import Image from "next/image";
 import Link from "next/link";
 import { NavbarDrawer } from "./NavbarDrawer";
 import { authClient } from "@/lib/auth-client";
-
+import { BiLogOutCircle } from "react-icons/bi";
 
 const Navbar = () => {
 
+    const { data } = authClient.useSession();
+    const user = data?.user;
+
     const handleSignOut = async () => {
         await authClient.signOut();
-    }
+    };
 
-    const userData = authClient.useSession()
-    const user = userData?.data?.user
-    console.log(user)
     return (
-        <div className="bg-white w-full py-3 shadow-sm animate__animated animate__fadeInDown">
-            <div className="w-11/12 mx-auto flex justify-between items-center">
-                <Link
-                    href={'/'}>
+        <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b shadow-sm">
+
+            <div className="w-11/12 mx-auto py-3 flex justify-between items-center">
+
+              
+                <Link href="/" className="flex items-center">
                     <Image
-                    sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
-                        src={'/LOGO.png'}
-                        width={150}
-                        height={150}
+                        src="/LOGO.png"
+                        width={140}
+                        height={140}
                         alt="logo"
+                        priority
                     />
                 </Link>
-                <ul className="gap-10 hidden md:flex">
-                    <li>
-                        <Link href={'/'}>Home</Link>
-                    </li>
-                    <li>
-                        <Link href={'/courses'}>Courses</Link>
-                    </li>
-                    <li>
-                        <Link href={'/profile'}>My Profile</Link>
-                    </li>
-                </ul>
-                <div>
-                    {!user && <div className="hidden md:flex gap-4">
-                        <Link href={'/login'}>
-                            <Button className='rounded-lg bg-[#5D38DE]' >Login</Button>
-                        </Link>
-                        <Link href={'/register'}>
-                            <Button className='rounded-lg' variant="outline">Register</Button>
-                        </Link>
-                    </div>}
-                    {user && <div className="hidden md:flex gap-4">
-                        <Link href={'/login'}>
-                            <Button className='rounded-lg' onClick={handleSignOut} variant="danger">Logout</Button>
-                        </Link>
 
-                    </div>}
-                    <div className='flex md:hidden'>
+               
+                <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-700">
+                    <Link className="hover:text-[#5D38DE] transition" href="/">Home</Link>
+                    <Link className="hover:text-[#5D38DE] transition" href="/courses">Courses</Link>
+                    <Link className="hover:text-[#5D38DE] transition" href="/profile">My Profile</Link>
+                </nav>
+
+               
+                <div className="flex items-center gap-3">
+
+                    {!user ? (
+                        <div className="hidden md:flex gap-3">
+                            <Link href="/login">
+                                <Button className="bg-[#5D38DE] text-white rounded-xl px-5">
+                                    Login
+                                </Button>
+                            </Link>
+
+                            <Link href="/register">
+                                <Button variant="bordered" className="rounded-xl px-5">
+                                    Register
+                                </Button>
+                            </Link>
+                        </div>
+                    ) : (
+                        <div className="hidden md:flex gap-3">
+                            <Button
+                                onClick={handleSignOut}
+                                isIconOnly variant="danger">
+                                <BiLogOutCircle />
+                            </Button>
+                        </div>
+                    )}
+
+                   
+                    <div className="md:hidden">
                         <NavbarDrawer />
                     </div>
+
                 </div>
+
             </div>
-        </div>
+        </header>
     );
 };
 
