@@ -1,6 +1,4 @@
 "use client";
-import { authClient } from "@/lib/auth-client";
-import { Check } from "@gravity-ui/icons";
 import {
     Button,
     Card,
@@ -12,43 +10,51 @@ import {
     Separator,
     TextField,
 } from "@heroui/react";
+import { Check } from "@gravity-ui/icons";
 import { GrGoogle } from "react-icons/gr";
+import { authClient } from "@/lib/auth-client";
 
 export default function SignInPage() {
 
     const onSubmit = async (e) => {
         e.preventDefault();
-
         const email = e.target.email.value;
         const password = e.target.password.value;
-
 
         const { data, error } = await authClient.signIn.email({
             email,
             password,
             callbackURL: '/'
+        });
 
-        })
-
-
-        console.log(data, error)
-    }
+        console.log(data, error);
+    };
 
     const handleGoogleSignIn = async () => {
         await authClient.signIn.social({
             provider: "google",
         });
-    }
-
+    };
 
     return (
-        <div className="px-5 mt-10 flex justify-center items-center animate__animated animate__fadeInRight">
-            <Card className="max-w-5xl mx-auto rounded-md">
-                <h1 className="text-center text-2xl font-bold">Login</h1>
+        <div className="min-h-screen flex items-center justify-center px-5 bg-[#f8f9ff]">
 
-                <Form className="flex flex-col gap-4" onSubmit={onSubmit}>
+            <Card className="w-full max-w-md p-6 md:p-8 rounded-2xl shadow-xl border border-gray-100 animate__animated animate__fadeInRight">
+
+                {/* Title */}
+                <div className="text-center mb-6">
+                    <h1 className="text-2xl md:text-3xl font-bold text-[#0f172a]">
+                        Welcome Back
+                    </h1>
+                    <p className="text-sm text-gray-500 mt-2">
+                        Login to continue your learning journey
+                    </p>
+                </div>
+
+                <Form className="flex flex-col gap-5" onSubmit={onSubmit}>
+
+                    
                     <TextField
-
                         isRequired
                         name="email"
                         type="email"
@@ -56,74 +62,83 @@ export default function SignInPage() {
                             if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(value)) {
                                 return "Please enter a valid email address";
                             }
-
                             return null;
                         }}
                     >
-                        <Label>Email</Label>
-                        <Input placeholder="Enter your Email"
-                            className='py-3 bg-transparent rounded-sm'
+                        <Label className="text-sm font-medium">Email</Label>
+                        <Input
+                            placeholder="Enter your email"
+                            className="py-3 rounded-xl border-gray-200 focus:border-[#5D38DE]"
                         />
                         <FieldError />
                     </TextField>
 
+                  
                     <TextField
                         isRequired
                         minLength={8}
                         name="password"
                         type="password"
                         validate={(value) => {
-                            if (value.length < 8) {
-                                return "Password must be at least 8 characters";
-                            }
-                            if (!/[A-Z]/.test(value)) {
-                                return "Password must contain at least one uppercase letter";
-                            }
-                            if (!/[0-9]/.test(value)) {
-                                return "Password must contain at least one number";
-                            }
-
+                            if (value.length < 8) return "Password must be at least 8 characters";
+                            if (!/[A-Z]/.test(value)) return "Must contain uppercase letter";
+                            if (!/[0-9]/.test(value)) return "Must contain number";
                             return null;
                         }}
                     >
-                        <Label>Password</Label>
+                        <Label className="text-sm font-medium">Password</Label>
                         <Input
-                            className='py-3 bg-transparent mb-3 rounded-sm'
-                            placeholder="Enter your password" />
-                        <Description>
-                            Must be at least 8 characters with 1 uppercase and 1 number
+                            placeholder="Enter your password"
+                            className="py-3 rounded-xl border-gray-200 focus:border-[#5D38DE]"
+                        />
+                        <Description className="text-xs text-gray-500">
+                            Must be 8+ characters with uppercase & number
                         </Description>
                         <FieldError />
                     </TextField>
 
-                    <div className="flex flex-col gap-2">
-                        <Button fullWidth type="submit"
-                            className='py-4 bg-[#5D38DE] rounded-sm '>
+                   
+                    <div className="flex flex-col gap-3 mt-2">
+
+                        <Button
+                            fullWidth
+                            type="submit"
+                            className="bg-[#5D38DE] text-white py-5 rounded-xl hover:bg-[#4c2fc2] transition"
+                        >
                             <Check />
-                            Submit
+                            Sign In
                         </Button>
+
                         <Button
                             fullWidth
                             type="reset"
-                            variant="outline"
-                            className='py-4 rounded-sm'
+                            variant="bordered"
+                            className="py-5 rounded-xl"
                         >
                             Reset
                         </Button>
                     </div>
-                    <Separator />
+
+                   
+                    <div className="flex items-center gap-3 my-2">
+                        <div className="h-px bg-gray-200 w-full"></div>
+                        <span className="text-xs text-gray-400">OR</span>
+                        <div className="h-px bg-gray-200 w-full"></div>
+                    </div>
+
                 </Form>
-                <p className="flex justify-center">
-                    Or
-                </p>
+
+              
                 <Button
                     fullWidth
                     onClick={handleGoogleSignIn}
-                    className='py-4 rounded-sm mb-4 text-[#5D38DE]'
-                    variant="outline">
-                    <GrGoogle className="" />
-                    Login With Google
+                    variant="bordered"
+                    className="py-5 rounded-xl flex items-center gap-2 hover:bg-gray-50 transition"
+                >
+                    <GrGoogle className="text-[#5D38DE]" />
+                    Continue with Google
                 </Button>
+
             </Card>
         </div>
     );
