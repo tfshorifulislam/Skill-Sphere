@@ -17,7 +17,7 @@ const Top3Courses = async () => {
                     View all
                 </Link>
             </div>
-            <div className='grid grid-cols-1 md:grid-cols-3 space-y-8 md:space-y-0 md:gap-5  mt-5'>
+            <div className='grid grid-cols-1 md:grid-cols-3 space-y-8 md:space-y-0 md:gap-5  mt-5 animate__animated animate__fadeInDown '>
 
                 {
                     topCourses.map(course =>

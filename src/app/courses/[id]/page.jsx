@@ -14,11 +14,15 @@ const CoursesDetailsPage = async ({ params }) => {
     return (
         <Card className="w-11/12 mx-auto mt-10 p-5 flex flex-col  md:flex-row">
             <Image
+                className="rounded-lg"
+                sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+                width={500}
+                height={400}
                 src={course.image}
-                className='md:w-70 rounded-xl' alt="" />
+                alt={course.title} />
             <Card.Header>
                 <Card.Title
-                    className='font-medium md:font-semibold text-lg md:text-xl text-[#313131] mb-4'>{course.title}</Card.Title>
+                    className='font-medium md:font-semibold text-lg md:text-xl text-[#080f22] mb-4'>{course.title}</Card.Title>
                 <Card.Description className='md:max-w-[50%] leading-6'>
                     {course.description}
                 </Card.Description>
