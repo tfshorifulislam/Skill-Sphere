@@ -4,7 +4,7 @@ import { Button, TextArea } from "@heroui/react";
 
 const Footer = () => {
     return (
-        <footer className="mt-24 bg-white px-5">
+        <footer className="mt-24 bg-white px-5 animate__animated animate__fadeInUp">
 
 
             <div className="w-11/12 mx-auto py-10 md:py-16">
@@ -14,6 +14,7 @@ const Footer = () => {
                     <div className="space-y-4">
                         <div className="flex items-center gap-2">
                             <Image
+                           
                                 src="/LOGO.png"
                                 alt="logo"
                                 width={200}

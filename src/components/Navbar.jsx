@@ -21,6 +21,7 @@ const Navbar = () => {
                 <Link
                     href={'/'}>
                     <Image
+                    sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
                         src={'/LOGO.png'}
                         width={150}
                         height={150}

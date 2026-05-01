@@ -29,10 +29,10 @@ export function NavbarDrawer() {
                             <div>
                                 {!user && <div className="w-full space-y-5 flex flex-col">
                                     <Link href={'/login'}>
-                                        <Button variant="primary" className='w-full' >Login</Button>
+                                        <Button variant="primary" className='w-full rounded-lg bg-[#5D38DE]' >Login</Button>
                                     </Link>
                                     <Link href={'/register'}>
-                                        <Button variant="outline" className='w-full' >Register</Button>
+                                        <Button variant="outline" className='w-full rounded-lg' >Register</Button>
                                     </Link>
                                 </div>}
                                 {user && <div className="px-5">

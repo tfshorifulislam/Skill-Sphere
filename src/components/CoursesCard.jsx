@@ -8,7 +8,7 @@ const CoursesCard = ({ course }) => {
     const { instructor, image, rating, title, category } = course;
     console.log(course)
     return (
-        <div className="shadow-sm p-2 md:p-5 rounded-xl bg-white">
+        <div className="shadow-sm p-3 md:p-5 rounded-xl bg-white">
             <div className="relative aspect-square">
                 <Image
                     className="rounded-lg object-cover"

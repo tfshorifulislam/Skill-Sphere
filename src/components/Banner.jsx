@@ -43,7 +43,7 @@ const Banner = () => {
                         sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
                         width={900}
                         height={900}
-                        src='/Frame 3.png'
+                        src='/image.png'
                         alt="to">
 
                     </Image>
