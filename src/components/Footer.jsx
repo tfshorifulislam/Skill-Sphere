@@ -1,137 +1,99 @@
 import Link from "next/link";
-import Image from "next/image";
-import { Button, TextArea } from "@heroui/react";
 
 const Footer = () => {
     return (
-        <footer className="mt-24 bg-white px-5 animate__animated animate__fadeInUp">
+        <footer className="bg-white border-t mt-24">
 
+            <div className="w-11/12 md:w-10/12 mx-auto py-14 md:py-20">
 
-            <div className="w-11/12 mx-auto py-10 md:py-16">
+                {/* TOP GRID */}
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
 
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+                    {/* Brand + Contact Info */}
+                    <div>
+                        <h2 className="text-2xl font-bold text-[#5D38DE] mb-3">
+                            Skill Sphere
+                        </h2>
 
-                    <div className="space-y-4">
-                        <div className="flex items-center gap-2">
-                            <Image
-                           
-                                src="/LOGO.png"
-                                alt="logo"
-                                width={200}
-                                height={200}
-                            />
-                        </div>
-
-                        <p
-                            className="text-sm leading-relaxed text-gray-600 dark:text-gray-400 max-w-xs">
-                            Skill Sphere is a modern online platform to build skills with expert guidance and quality courses.
+                        <p className="text-sm text-gray-600 leading-6 mb-4">
+                            A modern learning platform to build real-world skills with expert guidance.
                         </p>
+
+                        <div className="text-sm text-gray-600 space-y-2">
+                            <p>📍 Narayanganj, Dhaka, Bangladesh</p>
+                            <p>📧 support@skillsphere.com</p>
+                            <p>📞 +880 1568 621 583</p>
+                        </div>
                     </div>
 
-
-                    {/* Company */}
+                  
                     <div>
-                        <h3 className="text-sm font-semibold text-black dark:text-white mb-4">
-                            Menu
-                        </h3>
-                        <ul className="space-y-3 text-sm text-gray-600 dark:text-gray-400">
+                        <h3 className="font-semibold mb-4">Quick Links</h3>
+
+                        <ul className="space-y-3 text-sm text-gray-600">
+                            <li><Link href="/" className="hover:text-[#5D38DE]">Home</Link></li>
+                            <li><Link href="/courses" className="hover:text-[#5D38DE]">Courses</Link></li>
+                            <li><Link href="/about" className="hover:text-[#5D38DE]">About</Link></li>
+                            <li><Link href="/profile" className="hover:text-[#5D38DE]">Profile</Link></li>
+                        </ul>
+                    </div>
+
+                   
+                    <div>
+                        <h3 className="font-semibold mb-4">Follow Us</h3>
+
+                        <ul className="space-y-3 text-sm text-gray-600">
                             <li>
-                                <Link
-                                    href="/"
-                                    className="hover:text-black dark:hover:text-white transition"
-                                >
-                                    Home
+                                <a href="#" className="hover:text-[#5D38DE]">Facebook</a>
+                            </li>
+                            <li>
+                                <a href="#" className="hover:text-[#5D38DE]">Instagram</a>
+                            </li>
+                            <li>
+                                <a href="#" className="hover:text-[#5D38DE]">Twitter</a>
+                            </li>
+                            <li>
+                                <a href="#" className="hover:text-[#5D38DE]">LinkedIn</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                   
+                    <div>
+                        <h3 className="font-semibold mb-4">Legal</h3>
+
+                        <ul className="space-y-3 text-sm text-gray-600">
+                            <li>
+                                <Link href="/terms" className="hover:text-[#5D38DE]">
+                                    Terms & Conditions
                                 </Link>
                             </li>
                             <li>
-                                <Link
-                                    href="/courses"
-                                    className="hover:text-black dark:hover:text-white transition"
-                                >
-                                    Courses
-                                </Link>
-                            </li>
-                            <li>
-                                <Link
-                                    href="/profile"
-                                    className="hover:text-black dark:hover:text-white transition"
-                                >
-                                    My Profile
+                                <Link href="/privacy" className="hover:text-[#5D38DE]">
+                                    Privacy Policy
                                 </Link>
                             </li>
                         </ul>
                     </div>
 
-
-                    <div>
-                        <h3 className="text-sm font-semibold text-black dark:text-white mb-4">
-                            Contact Us
-                        </h3>
-                        <ul className="space-y-3 text-sm text-gray-600 dark:text-gray-400">
-                            <li>
-                                <a
-                                    href="https://www.facebook.com/tfshorifuislam"
-                                    className="hover:text-black dark:hover:text-white transition"
-                                >
-                                    Facebook
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="https://www.instagram.com/tfshorifulislam/"
-                                    className="hover:text-black dark:hover:text-white transition"
-                                >
-                                    Instagram
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="https://www.instagram.com/tfshorifulislam/"
-                                    className="hover:text-black dark:hover:text-white transition"
-                                >
-                                    Twitter
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-
-
-                    {/* CTA Block */}
-                    <div className="space-y-4 flex flex-col">
-                        <TextArea
-                            aria-label="Quick project update"
-                            className="h-32 "
-                            placeholder="Share your feedback"
-                        />
-                        <Button fullWidth className='bg-[#5D38DE] rounded-lg'>
-                            Submit
-                        </Button>
-                    </div>
                 </div>
 
-                {/* Divider */}
-                <div className="mt-12 h-px w-full bg-linear-to-r from-transparent via-gray-300 to-transparent dark:via-white/10" />
+               
+                <div className="my-10 h-px bg-gray-200"></div>
 
-                {/* Bottom */}
-                <div className="mt-6 flex justify-between flex-col md:flex-row items-center space-y-3 text-xs text-gray-500 dark:text-gray-400">
-                    <p>© {new Date().getFullYear()} skill-sphere. All rights reserved.</p>
+               
+                <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-500 gap-3">
 
-                    <div className="flex items-center gap-6">
-                        <Link
-                            href="/privacy"
-                            className="hover:text-black dark:hover:text-white transition"
-                        >
-                            Privacy
-                        </Link>
-                        <Link
-                            href="/terms"
-                            className="hover:text-black dark:hover:text-white transition"
-                        >
-                            Terms
-                        </Link>
-                    </div>
+                    <p>
+                        © {new Date().getFullYear()} Skill Sphere. All rights reserved.
+                    </p>
+
+                    <p>
+                        Built with ❤️ for learners
+                    </p>
+
                 </div>
+
             </div>
         </footer>
     );
