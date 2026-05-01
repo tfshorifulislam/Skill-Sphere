@@ -4,6 +4,7 @@ import { Button, Card, Description, FieldError, Form, Input, Label, Separator, T
 import { authClient } from '@/lib/auth-client';
 import { useRouter } from 'next/navigation';
 import { GrGoogle } from 'react-icons/gr';
+import { Check } from '@gravity-ui/icons';
 
 
 
@@ -47,9 +48,9 @@ const RegisterPage = () => {
                     <TextField isRequired
                         name="name"
                         type="text">
-                        <Label>Name</Label>
+                        <Label className="text-sm font-medium">Name</Label>
                         <Input
-                            className='py-3  rounded-sm'
+                            className="py-3 rounded-xl border-gray-200 focus:border-[#5D38DE]"
                             placeholder="Enter your name" />
                         <FieldError />
                     </TextField>
@@ -58,9 +59,9 @@ const RegisterPage = () => {
                         isRequired
                         name="image"
                         type="text">
-                        <Label>Image URL</Label>
+                        <Label className="text-sm font-medium">Image URL</Label>
                         <Input
-                            className='py-3 rounded-sm'
+                          className="py-3 rounded-xl border-gray-200 focus:border-[#5D38DE]"
                             placeholder="Image URL" />
                         <FieldError />
                     </TextField>
@@ -77,9 +78,9 @@ const RegisterPage = () => {
                             return null;
                         }}
                     >
-                        <Label>Email</Label>
+                        <Label className="text-sm font-medium">Email</Label>
                         <Input
-                            className='py-3 rounded-sm'
+                            className="py-3 rounded-xl border-gray-200 focus:border-[#5D38DE]"
                             placeholder="Enter your Email" />
                         <FieldError />
                     </TextField>
@@ -103,11 +104,11 @@ const RegisterPage = () => {
                             return null;
                         }}
                     >
-                        <Label>Password</Label>
+                        <Label className="text-sm font-medium">Password</Label>
                         <Input
-                            className='py-3 rounded-sm'
+                            className="py-3 rounded-xl border-gray-200 focus:border-[#5D38DE]"
                             placeholder="Enter your password" />
-                        <Description>
+                        <Description className="text-xs text-gray-500">
                             Must be at least 8 characters with 1 uppercase and 1 number
                         </Description>
                         <FieldError />
@@ -115,33 +116,37 @@ const RegisterPage = () => {
 
                     <div className="flex flex-col gap-2">
                         <Button
-                            className='py-4 rounded-sm mb-2 bg-[#5D38DE]'
                             fullWidth
-                            type="submit">
-
+                            type="submit"
+                            className="bg-[#5D38DE] text-white py-5 rounded-xl hover:bg-[#4c2fc2] transition"
+                        >
+                            <Check />
                             Submit
                         </Button>
                         <Button
                             fullWidth
                             type="reset"
-                            variant="outline"
-                            className='py-4 rounded-sm'
+                            variant="bordered"
+                            className="py-5 rounded-xl"
                         >
                             Reset
                         </Button>
                     </div>
+                    <div className="flex items-center gap-3 my-2">
+                        <div className="h-px bg-gray-200 w-full"></div>
+                        <span className="text-xs text-gray-400">OR</span>
+                        <div className="h-px bg-gray-200 w-full"></div>
+                    </div>
                 </Form>
-                <Separator className='mt-4' />
-                <p className="flex justify-center">
-                    Or
-                </p>
+
                 <Button
-                    className='py-4 rounded-sm mb-4 text-[#5D38DE]'
-                    onClick={handleGoogleSignIn}
                     fullWidth
-                    variant="outline">
-                    <GrGoogle />
-                    Register With Google
+                    onClick={handleGoogleSignIn}
+                    variant="bordered"
+                    className="py-5 rounded-xl flex items-center gap-2 hover:bg-gray-50 transition"
+                >
+                    <GrGoogle className="text-[#5D38DE]" />
+                    Continue with Google
                 </Button>
             </Card>
         </div>
