@@ -1,11 +1,11 @@
-import { Button, Chip } from "@heroui/react";
+import { Button, Chip, Separator } from "@heroui/react";
 import Image from "next/image";
 import Link from "next/link";
-import { IoStar } from "react-icons/io5";
+import { IoStar, IoStarHalf, IoTime } from "react-icons/io5";
 
 const CoursesCard = ({ course }) => {
     console.log(course)
-    const { instructor, image, rating, title, category } = course;
+    const { instructor, image,duration, level, rating, title, category } = course;
     console.log(course)
     return (
         <div className="shadow-sm p-3 md:p-5 rounded-xl bg-white">
@@ -23,20 +23,28 @@ const CoursesCard = ({ course }) => {
                     {title}
                 </h1>
             </div>
-            <div className="flex  justify-between">
+            <div className="flex mt-2 justify-between items-center ">
                 <p className=" text-[#5e5e5e] mt-2">
                     instructor: {instructor}
                 </p>
-                <p className="font-medium mt-2 text-[#5e5e5e] justify-center flex gap-1 items-center">
-                    <IoStar /> {rating}
+                <Chip>{level}</Chip>
+
+            </div>
+            <div className="flex font-medium gap-5 mt-5  text-lg text-[#1e1e1e]">
+                <p className=" flex gap-1 items-center ">
+                    <IoStarHalf  /> {rating}
+                </p>
+                <Separator orientation="vertical" />
+                <p className="flex gap-1 items-center ">
+                    <IoTime   /> {duration}
                 </p>
             </div>
 
 
             <Link href={`/courses/${course.id}`}>
                 <Button
-                size="sm"
-                    className='w-full mt-8 bg-[#5D38DE]'>
+                    size="sm"
+                    className='w-full mt-8 rounded-lg bg-[#5D38DE]'>
                     View Details
                 </Button>
             </Link>

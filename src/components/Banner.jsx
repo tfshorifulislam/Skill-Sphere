@@ -11,8 +11,8 @@ const Banner = () => {
             <div
                 className="mx-auto w-11/12 md:w-9/12 flex flex-col md:flex-row items-center justify-between">
                 <div className="md:max-w-2xl text-[#1e1e1e] text-center md:text-start animate__animated animate__fadeInLeft">
-                    <h1 className="text-3xl md:text-6xl font-semibold  md:font-bold mb-5 md:leading-20 text-[#141219] ">
-                        Upgrade <span className="text-[#5D38DE]">Your Skills</span> Today
+                    <h1 className="text-4xl md:text-7xl font-semibold  md:font-bold mb-5 md:leading-20 text-[#141219] ">
+                        Learn from <span className="text-[#5D38DE]">Industry</span> Experts
                     </h1>
 
                     <p className="mb-4 text-sm md:text-lg leading-6 md:leading-8 opacity-60 ">
