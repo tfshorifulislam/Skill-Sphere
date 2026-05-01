@@ -5,18 +5,18 @@ import { IoStar } from "react-icons/io5";
 
 const CoursesCard = ({ course }) => {
     console.log(course)
-    const { instructor, image, rating, title , category} = course;
+    const { instructor, image, rating, title, category } = course;
     console.log(course)
     return (
-        <div className="shadow-sm p-5 rounded-xl bg-white">
-            <div className="relative">
+        <div className="shadow-sm p-2 md:p-5 rounded-xl bg-white">
+            <div className="relative aspect-square">
                 <Image
-                    className="rounded-xl"
-                    width={500}
-                    height={500}
+                    className="rounded-lg object-cover"
+                    sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+                    fill
                     src={image}
                     alt={title} />
-                    <Chip className="absolute bottom-2 right-2">{category}</Chip>
+                <Chip className="absolute bottom-2 right-2">{category}</Chip>
             </div>
             <div>
                 <h1 className="font-medium text-[#343434] md:font-semibold mt-5  md:text-lg ">
@@ -35,6 +35,7 @@ const CoursesCard = ({ course }) => {
 
             <Link href={`/courses/${course.id}`}>
                 <Button
+                size="sm"
                     className='w-full mt-8'>
                     View Details
                 </Button>
