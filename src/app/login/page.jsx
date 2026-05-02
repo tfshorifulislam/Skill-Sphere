@@ -13,6 +13,7 @@ import {
 import { Check } from "@gravity-ui/icons";
 import { GrGoogle } from "react-icons/gr";
 import { authClient } from "@/lib/auth-client";
+import { toast } from "react-toastify";
 
 export default function SignInPage() {
 
@@ -27,7 +28,12 @@ export default function SignInPage() {
             callbackURL: '/'
         });
 
-        console.log(data, error);
+        if (error) {
+            toast.error("Login failed! ❌");
+        } else {
+            toast.success("Login successful! ✅");
+        }
+
     };
 
     const handleGoogleSignIn = async () => {
@@ -53,7 +59,7 @@ export default function SignInPage() {
 
                 <Form className="flex flex-col gap-5" onSubmit={onSubmit}>
 
-                    
+
                     <TextField
                         isRequired
                         name="email"
@@ -73,7 +79,7 @@ export default function SignInPage() {
                         <FieldError />
                     </TextField>
 
-                  
+
                     <TextField
                         isRequired
                         minLength={8}
@@ -97,7 +103,7 @@ export default function SignInPage() {
                         <FieldError />
                     </TextField>
 
-                   
+
                     <div className="flex flex-col gap-3 mt-2">
 
                         <Button
@@ -119,7 +125,7 @@ export default function SignInPage() {
                         </Button>
                     </div>
 
-                   
+
                     <div className="flex items-center gap-3 my-2">
                         <div className="h-px bg-gray-200 w-full"></div>
                         <span className="text-xs text-gray-400">OR</span>
@@ -128,7 +134,7 @@ export default function SignInPage() {
 
                 </Form>
 
-              
+
                 <Button
                     fullWidth
                     onClick={handleGoogleSignIn}
