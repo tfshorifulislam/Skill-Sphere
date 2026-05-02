@@ -40,8 +40,8 @@ const RegisterPage = () => {
     }
 
     return (
-        <div className="px-5 mt-10 flex justify-center items-center animate__animated animate__fadeInLeft">
-            <Card className="max-w-5xl mx-auto rounded-md">
+        <div className="min-h-screen flex items-center justify-center px-5 bg-[#f8f9ff]">
+            <Card className="w-full max-w-md p-6 md:p-8 rounded-2xl shadow-xl border border-gray-100 animate__animated animate__fadeInRight">
                 <h1 className="text-center text-2xl font-bold">Register</h1>
 
                 <Form className="flex  flex-col gap-4" onSubmit={onSubmit}>
