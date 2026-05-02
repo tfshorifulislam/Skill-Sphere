@@ -6,7 +6,8 @@
     "image": "/1.jpg",
     "rating": 4.9,
     "experience": "5+ Years",
-    "category": "Development"
+    "category": "Development",
+    "bio": "Specialized in building scalable full-stack web applications using modern JavaScript frameworks and cloud technologies."
   },
   {
     "id": 2,
@@ -15,7 +16,8 @@
     "image": "/2.jpg",
     "rating": 4.8,
     "experience": "4+ Years",
-    "category": "Development"
+    "category": "Development",
+    "bio": "Expert in React ecosystem, focused on building high-performance and accessible user interfaces with clean architecture."
   },
   {
     "id": 3,
@@ -24,7 +26,8 @@
     "image": "/3.jpg",
     "rating": 4.7,
     "experience": "3+ Years",
-    "category": "Design"
+    "category": "Design",
+    "bio": "Designs intuitive and user-centered digital experiences with a strong focus on usability, aesthetics, and interaction design."
   },
   {
     "id": 4,
@@ -33,6 +36,7 @@
     "image": "/4.jpg",
     "rating": 4.8,
     "experience": "6+ Years",
-    "category": "Development"
+    "category": "Development",
+    "bio": "Builds robust backend systems and APIs using Node.js, focusing on performance, security, and scalable architecture."
   }
 ]

@@ -41,7 +41,7 @@ const TeacherDetailsCard = ({ instructor }) => {
                             key={idx}
                             className="text-[11px] tracking-wide bg-[#5D38DE]/10 text-[#5D38DE] px-2.5 py-1 rounded-full border border-[#5D38DE]/10"
                         >
-                            {skill.trim()}
+                            {skill}
                         </div>
                     ))}
                 </div>
