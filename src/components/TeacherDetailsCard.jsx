@@ -36,13 +36,13 @@ const TeacherDetailsCard = ({ instructor }) => {
 
 
                 <div className="mt-4 flex flex-wrap gap-2">
-                    {instructor.expertise?.map((skill, idx) => (
-                        <span
+                    {instructor.rating.map((skill, idx) => (
+                        <div
                             key={idx}
                             className="text-[11px] tracking-wide bg-[#5D38DE]/10 text-[#5D38DE] px-2.5 py-1 rounded-full border border-[#5D38DE]/10"
                         >
                             {skill.trim()}
-                        </span>
+                        </div>
                     ))}
                 </div>
 
