@@ -10,7 +10,7 @@ const CoursesCard = ({ course }) => {
         <div className="group bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden">
 
             {/* Image */}
-            <div className="relative aspect-[4/3] overflow-hidden">
+            <div className="relative aspect-4/3 overflow-hidden">
                 <Image
                     className="object-cover group-hover:scale-105 transition duration-300"
                     fill

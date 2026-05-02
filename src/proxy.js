@@ -1,7 +1,7 @@
 import { headers } from 'next/headers'
 import { NextResponse } from 'next/server'
 import { auth } from './lib/auth'
-import { toast } from 'react-toastify'
+
 
 export async function proxy(request) {
     const session = await auth.api.getSession({
