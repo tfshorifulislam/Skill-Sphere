@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import React from 'react';
 import { FaStar } from 'react-icons/fa';
+import { FaRegStarHalfStroke } from 'react-icons/fa6';
+
 
 const TeacherDetailsCard = ({ instructor }) => {
     console.log(instructor)
@@ -35,15 +37,18 @@ const TeacherDetailsCard = ({ instructor }) => {
                 </p>
 
 
-                <div className="mt-4 flex flex-wrap gap-2">
-                    {instructor.rating.map((skill, idx) => (
-                        <div
-                            key={idx}
-                            className="text-[11px] tracking-wide bg-[#5D38DE]/10 text-[#5D38DE] px-2.5 py-1 rounded-full border border-[#5D38DE]/10"
-                        >
-                            {skill}
-                        </div>
-                    ))}
+                <div className="mt-4 flex items-center gap-2">
+                    <span className='flex gap-1 text-yellow-500'>
+                        <FaStar />
+                        <FaStar />
+                        <FaStar />
+                        <FaStar />
+                        <FaRegStarHalfStroke />
+
+                    </span>
+                    <span className='text-gray-500'>
+                        {instructor.rating}
+                    </span>
                 </div>
 
 
