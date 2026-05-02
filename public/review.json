@@ -4,7 +4,7 @@
         "name": "Emily Johnson",
         "role": "UI/UX Designer",
         "image": "/1.jpg",
-        "rating": 5,
+        "rating": 5.0,
         "review": "The design courses are top-notch. I improved my skills a lot in a short time."
     },
     {
@@ -12,7 +12,7 @@
         "name": "John Smith",
         "role": "Frontend Developer",
         "image": "/2.jpg",
-        "rating": 5,
+        "rating": 5.0,
         "review": "Amazing platform! The UI and learning experience are very smooth and beginner friendly."
     },
     {
@@ -20,7 +20,7 @@
         "name": "Sarah Khan",
         "role": "React Learner",
         "image": "/3.jpg",
-        "rating": 4,
+        "rating": 4.4,
         "review": "I learned React very easily. The course structure is very well organized."
     },
     {
@@ -28,7 +28,7 @@
         "name": "Michael Brown",
         "role": "Full Stack Developer",
         "image": "/1.jpg",
-        "rating": 5,
+        "rating": 5.0,
         "review": "Best platform for full stack learning. Everything is explained clearly."
     },
     {
@@ -36,7 +36,7 @@
         "name": "David Wilson",
         "role": "Backend Engineer",
         "image": "/2.jpg",
-        "rating": 4,
+        "rating": 4.9,
         "review": "Node.js and backend concepts are taught in a very simple way."
     },
     {
@@ -44,7 +44,7 @@
         "name": "Sophia Lee",
         "role": "Graphic Designer",
         "image": "/3.jpg",
-        "rating": 5,
+        "rating": 5.0,
         "review": "Loved the UI/UX design section. Very practical and useful lessons."
     },
     {
@@ -52,7 +52,7 @@
         "name": "James Anderson",
         "role": "Student",
         "image": "/1.jpg",
-        "rating": 4,
+        "rating": 4.5,
         "review": "Great learning experience for beginners like me."
     },
     {
@@ -60,7 +60,7 @@
         "name": "Olivia Martinez",
         "role": "Web Developer",
         "image": "/2.jpg",
-        "rating": 5,
+        "rating": 5.0,
         "review": "The courses helped me land my first job as a web developer."
     },
     {
@@ -68,7 +68,7 @@
         "name": "Daniel Thomas",
         "role": "Software Engineer",
         "image": "/3.jpg",
-        "rating": 5,
+        "rating": 5.0,
         "review": "Excellent content and very structured learning path."
     },
     {
@@ -76,7 +76,7 @@
         "name": "Emma Watson",
         "role": "UI Designer",
         "image": "/1.jpg",
-        "rating": 5,
+        "rating": 5.0,
         "review": "Very creative and practical design lessons. Highly recommended!"
     }
 ]
