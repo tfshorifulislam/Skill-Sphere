@@ -4,7 +4,9 @@ import { Button } from '@heroui/react';
 import Link from 'next/link';
 
 const Top3Courses = async () => {
-    const res = await fetch('https://skill-sphere-topaz.vercel.app/data.json');
+    const res = await fetch('https://skill-sphere-topaz.vercel.app/data.json', {
+        cache: 'no-store'
+    });
     const courses = await res.json();
 
     const topCourses = courses

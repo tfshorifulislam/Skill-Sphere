@@ -11,7 +11,7 @@ const Banner = () => {
             <div className="absolute -top-32 -left-32 w-100 h-100 bg-[#5D38DE]/30 blur-[120px] rounded-full"></div>
             <div className="absolute -bottom-32 -right-32 w-100 h-100 bg-purple-300/30 blur-[120px] rounded-full"></div>
 
-            <div className="relative mx-auto w-11/12 md:w-9/12 py-14 md:py-24 flex flex-col md:flex-row items-center justify-between gap-12">
+            <div className="relative mx-auto w-11/12 md:w-9/12 pt-14 md:pt-24 flex flex-col md:flex-row items-center justify-between gap-12">
 
                
                 <div className="max-w-xl text-center md:text-left">
