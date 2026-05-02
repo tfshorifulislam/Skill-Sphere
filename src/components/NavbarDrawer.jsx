@@ -11,7 +11,6 @@ import { RxHamburgerMenu } from "react-icons/rx";
 export function NavbarDrawer() {
     const [isOpen, setIsOpen] = React.useState(false);
 
-    const state = useOverlayState();
 
     const userData = authClient.useSession()
     const user = userData.data?.user
@@ -38,7 +37,7 @@ export function NavbarDrawer() {
                 <Drawer.Content placement="right">
                     <Drawer.Dialog>
 
-                        {/* HEADER */}
+
                         <Drawer.Header className="border-b pb-4">
                             <Drawer.Heading className="text-lg font-semibold flex justify-between items-center">
                                 <p>Menu</p>
@@ -46,38 +45,42 @@ export function NavbarDrawer() {
                             </Drawer.Heading>
                         </Drawer.Header>
 
-                        {/* BODY */}
+
                         <div className="p-5 flex flex-col h-full">
 
-                            {/* USER HEADER (Account style) */}
+
                             {user &&
-                                <div
-                                    className="flex items-center gap-3 pb-5 border-b">
+                                <Link href={'/profile'}>
+                                    <Button
+                                        onClick={() => setIsOpen(false)}
+                                        variant="none"
+                                        className="flex text-start shadow-none border-none p-0 items-center gap-3 pb-5 border-b">
 
-                                    <div className="w-10 h-10 rounded-full bg-[#5D38DE] flex items-center justify-center text-white font-bold">
-                                        {user?.image && (
-                                            <Image
-                                                src={user.image}
-                                                width={150}
-                                                height={150}
-                                                alt="avatar"
-                                                className="rounded-full object-cover"
-                                            />
-                                        )}
-                                    </div>
+                                        <div className="w-10 h-10 rounded-full  flex items-center justify-center">
+                                            {user?.image && (
+                                                <Image
+                                                    src={user?.image}
+                                                    width={150}
+                                                    height={150}
+                                                    alt={user?.name}
+                                                    className="rounded-full object-cover"
+                                                />
+                                            )}
+                                        </div>
 
-                                    <div className="flex flex-col">
-                                        <p className="text-sm font-semibold">
-                                            {user.name}
-                                        </p>
-                                        <p className="text-xs text-gray-500">
-                                            {user.email}
-                                        </p>
-                                    </div>
+                                        <div className="flex flex-col">
+                                            <p className="text-sm font-semibold">
+                                                {user?.name}
+                                            </p>
+                                            <p className="text-xs text-gray-500">
+                                                {user?.email}
+                                            </p>
+                                        </div>
 
-                                </div>}
+                                    </Button>
+                                </Link>}
 
-                            {/* NAVIGATION */}
+
                             <div className="mt-5 space-y-1">
 
                                 <p className="text-xs text-gray-400 uppercase tracking-wider mb-2">
@@ -116,7 +119,7 @@ export function NavbarDrawer() {
 
                             </div>
 
-                            {/* ACCOUNT SECTION */}
+
                             {!user && (
                                 <div className="mt-8 space-y-3">
 

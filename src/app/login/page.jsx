@@ -50,7 +50,7 @@ export default function SignInPage() {
     return (
         <div className="min-h-screen flex items-center justify-center px-5 bg-[#f8f9ff]">
 
-            <Card className="w-full max-w-md p-6 md:p-8 rounded-2xl shadow-xl border border-gray-100 animate__animated animate__fadeInRight">
+            <Card className="w-full max-w-md p-6 md:p-8 rounded-2xl shadow-xl border border-gray-100 animate__animated animate__fadeInLeft">
 
                 {/* Title */}
                 <div className="text-center mb-6">
