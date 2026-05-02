@@ -2,55 +2,63 @@ import Image from 'next/image';
 import React from 'react';
 import { FaStar } from 'react-icons/fa';
 
-const TeacherDetailsCard = (ins) => {
-    console.log(ins.image)
+const TeacherDetailsCard = ({ instructor }) => {
+    console.log(instructor)
+
     return (
 
         <div
-            className="group relative bg-white rounded-2xl shadow-md hover:shadow-2xl transition duration-300 p-6 text-center overflow-hidden">
+            className="group relative bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_20px_60px_-15px_rgba(93,56,222,0.25)]"
+        >
 
-            {/* glow effect */}
-            <div className="absolute -top-10 -right-10 w-24 h-24 bg-[#5D38DE]/10 blur-2xl rounded-full group-hover:scale-150 transition" />
+            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-linear-to-b from-[#5D38DE]/10 to-transparent pointer-events-none"></div>
 
-            {/* Image */}
-            <div className=" w-24 h-24 mx-auto">
+
+            <div className="relative w-full aspect-4/3 overflow-hidden bg-gray-100">
                 <Image
-                    src={ins.image}
-                    alt={ins.name || "Instructor"}
+                    src={instructor.image}
+                    alt={instructor.name}
                     width={500}
                     height={500}
-                    className="rounded-full object-cover border-4 border-white shadow-md group-hover:scale-110 transition"
+                    className="object-cover object-[50%_25%] transition-transform duration-700 group-hover:scale-110"
                 />
             </div>
 
-            {/* Name */}
-            <h3 className="mt-4 font-semibold text-lg text-[#111827]">
-                {ins.name}
-            </h3>
 
-            {/* Role */}
-            <p className="text-sm text-gray-500">
-                {ins.role}
-            </p>
+            <div className="p-6 relative z-10">
+                <h3 className="text-xl font-semibold text-[#5D38DE] group-hover:text-slate-900 transition">
+                    {instructor.name}
+                </h3>
 
-            {/* Rating */}
-            <div className="flex items-center justify-center gap-1 mt-3 text-yellow-500">
-                <FaStar />
-                <FaStar />
-                <FaStar />
-                <FaStar />
-                <FaStar />
+                <p className="text-sm text-gray-500 mt-2 leading-relaxed">
+                    {instructor.bio || "Professional Instructor"}
+                </p>
+
+
+                <div className="mt-4 flex flex-wrap gap-2">
+                    {instructor.expertise?.map((skill, idx) => (
+                        <span
+                            key={idx}
+                            className="text-[11px] tracking-wide bg-[#5D38DE]/10 text-[#5D38DE] px-2.5 py-1 rounded-full border border-[#5D38DE]/10"
+                        >
+                            {skill.trim()}
+                        </span>
+                    ))}
+                </div>
+
+
+                <div className="flex items-center gap-1 mt-5 text-yellow-500">
+                    <FaStar className="text-sm" />
+                    <FaStar className="text-sm" />
+                    <FaStar className="text-sm" />
+                    <FaStar className="text-sm" />
+                    <FaStar className="text-gray-300 text-sm" />
+
+                    <span className="text-gray-500 text-sm ml-2">
+                        4.8
+                    </span>
+                </div>
             </div>
-
-            {/* badge */}
-            <div className="mt-4">
-                <span className="text-xs px-3 py-1 bg-[#5D38DE]/10 text-[#5D38DE] rounded-full">
-                    Expert Instructor
-                </span>
-            </div>
-
-            {/* hover line */}
-            <div className="absolute bottom-0 left-0 w-0 h-1 bg-[#5D38DE] group-hover:w-full transition-all duration-300" />
         </div>
     );
 };
