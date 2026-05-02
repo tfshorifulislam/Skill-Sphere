@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { authClient } from "@/lib/auth-client";
 import { Button } from "@heroui/react";
+import { UpdateUsersInfo } from "@/components/UpdateUserInfo";
 
 const ProfileCard = () => {
     const userData = authClient.useSession();
@@ -64,10 +65,7 @@ const ProfileCard = () => {
 
                     </div>
 
-
-                    <Button className="mt-5 w-full bg-[#5D38DE] text-white py-2.5 rounded-xl hover:bg-[#4c2fc2] transition">
-                        Edit Profile
-                    </Button>
+                    <UpdateUsersInfo />
 
                 </div>
             </div>
