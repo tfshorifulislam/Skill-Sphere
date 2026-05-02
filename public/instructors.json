@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "role": "Full Stack Web Developer",
+    "image": "/1.jpg",
+    "rating": 4.9,
+    "experience": "5+ Years",
+    "category": "Development"
+  },
+  {
+    "id": 2,
+    "name": "Jane Smith",
+    "role": "Frontend Engineer (React Specialist)",
+    "image": "/2.jpg",
+    "rating": 4.8,
+    "experience": "4+ Years",
+    "category": "Development"
+  },
+  {
+    "id": 3,
+    "name": "Emily Johnson",
+    "role": "UI/UX Designer",
+    "image": "/3.jpg",
+    "rating": 4.7,
+    "experience": "3+ Years",
+    "category": "Design"
+  },
+  {
+    "id": 4,
+    "name": "Michael Brown",
+    "role": "Backend Engineer (Node.js Expert)",
+    "image": "/4.jpg",
+    "rating": 4.8,
+    "experience": "6+ Years",
+    "category": "Development"
+  }
+]

@@ -55,7 +55,7 @@ export function NavbarDrawer() {
                                     className="flex items-center gap-3 pb-5 border-b">
 
                                     <div className="w-10 h-10 rounded-full bg-[#5D38DE] flex items-center justify-center text-white font-bold">
-                                        {user?.image ? (
+                                        {user?.image && (
                                             <Image
                                                 src={user.image}
                                                 width={150}
@@ -63,8 +63,6 @@ export function NavbarDrawer() {
                                                 alt="avatar"
                                                 className="rounded-full object-cover"
                                             />
-                                        ) : (
-                                            user?.name?.split(" ").map(n => n[0]).join("").slice(0, 2).toUpperCase()
                                         )}
                                     </div>
 
@@ -73,7 +71,7 @@ export function NavbarDrawer() {
                                             {user.name}
                                         </p>
                                         <p className="text-xs text-gray-500">
-                                            View account
+                                            {user.email}
                                         </p>
                                     </div>
 
