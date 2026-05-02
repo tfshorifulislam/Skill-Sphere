@@ -2,8 +2,10 @@
 
 import { authClient } from "@/lib/auth-client";
 import { Button, Drawer, useOverlayState } from "@heroui/react";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { IoCloseOutline } from "react-icons/io5";
 import { RxHamburgerMenu } from "react-icons/rx";
 
 export function NavbarDrawer() {
@@ -38,20 +40,94 @@ export function NavbarDrawer() {
 
                         {/* HEADER */}
                         <Drawer.Header className="border-b pb-4">
-                            <Drawer.Heading className="text-lg font-semibold">
-                                Menu
+                            <Drawer.Heading className="text-lg font-semibold flex justify-between items-center">
+                                <p>Menu</p>
+                                <IoCloseOutline onClick={() => setIsOpen(false)} />
                             </Drawer.Heading>
                         </Drawer.Header>
 
                         {/* BODY */}
-                        <div className="p-5 space-y-6">
+                        <div className="p-5 flex flex-col h-full">
 
-                            {/* AUTH SECTION */}
+                            {/* USER HEADER (Account style) */}
+                            {user &&
+                                <div
+                                    className="flex items-center gap-3 pb-5 border-b">
+
+                                    <div className="w-10 h-10 rounded-full bg-[#5D38DE] flex items-center justify-center text-white font-bold">
+                                        {user?.image ? (
+                                            <Image
+                                                src={user.image}
+                                                width={150}
+                                                height={150}
+                                                alt="avatar"
+                                                className="rounded-full object-cover"
+                                            />
+                                        ) : (
+                                            user?.name?.split(" ").map(n => n[0]).join("").slice(0, 2).toUpperCase()
+                                        )}
+                                    </div>
+
+                                    <div className="flex flex-col">
+                                        <p className="text-sm font-semibold">
+                                            {user.name}
+                                        </p>
+                                        <p className="text-xs text-gray-500">
+                                            View account
+                                        </p>
+                                    </div>
+
+                                </div>}
+
+                            {/* NAVIGATION */}
+                            <div className="mt-5 space-y-1">
+
+                                <p className="text-xs text-gray-400 uppercase tracking-wider mb-2">
+                                    Navigation
+                                </p>
+
+                                <Link href="/">
+                                    <Button
+                                        onClick={() => setIsOpen(false)}
+                                        variant="light"
+                                        className="w-full justify-start rounded-xl py-5 hover:bg-gray-100 transition font-medium"
+                                    >
+                                        Home
+                                    </Button>
+                                </Link>
+
+                                <Link href="/courses">
+                                    <Button
+                                        onClick={() => setIsOpen(false)}
+                                        variant="light"
+                                        className="w-full justify-start rounded-xl py-5 hover:bg-gray-100 transition font-medium"
+                                    >
+                                        Courses
+                                    </Button>
+                                </Link>
+
+                                <Link href="/profile">
+                                    <Button
+                                        onClick={() => setIsOpen(false)}
+                                        variant="light"
+                                        className="w-full justify-start rounded-xl py-5 hover:bg-gray-100 transition font-medium"
+                                    >
+                                        My Profile
+                                    </Button>
+                                </Link>
+
+                            </div>
+
+                            {/* ACCOUNT SECTION */}
                             {!user && (
-                                <div className="space-y-3">
+                                <div className="mt-8 space-y-3">
+
+                                    <p className="text-xs text-gray-400 uppercase tracking-wider">
+                                        Account
+                                    </p>
 
                                     <Link href="/login">
-                                        <Button className="w-full bg-[#5D38DE] text-white rounded-xl py-5 hover:bg-[#4c2fc2] transition">
+                                        <Button className="w-full bg-[#5D38DE] text-white rounded-xl py-5 hover:bg-[#4c2fc2] transition font-medium">
                                             Login
                                         </Button>
                                     </Link>
@@ -59,71 +135,34 @@ export function NavbarDrawer() {
                                     <Link href="/register">
                                         <Button
                                             variant="bordered"
-                                            className="w-full rounded-xl py-5"
+                                            className="w-full rounded-xl py-5 font-medium"
                                         >
-                                            Register
+                                            Create account
                                         </Button>
                                     </Link>
 
                                 </div>
                             )}
 
-                            {/* NAV LINKS */}
+                            {/* FOOTER ACTIONS (X-style logout area) */}
                             {user && (
-                                <div className="space-y-3">
+                                <div className="mt-auto pt-5 border-t space-y-3">
 
-                                    <Link href="/">
-                                        <Button
-                                            onClick={() => setIsOpen(false)}
-                                            variant="light"
-                                            className="w-full justify-start rounded-xl py-5 hover:bg-gray-100"
-                                        >
-                                            Home
-                                        </Button>
-                                    </Link>
+                                    <Button
+                                        onClick={handleSignOut}
+                                        className="w-full bg-red-500 text-white rounded-xl py-5 hover:bg-red-600 transition font-medium"
+                                    >
+                                        Logout
+                                    </Button>
 
-                                    <Link href="/courses">
-                                        <Button
-                                            onClick={() => setIsOpen(false)}
-                                            variant="light"
-                                            className="w-full justify-start rounded-xl py-5 hover:bg-gray-100"
-                                        >
-                                            Courses
-                                        </Button>
-                                    </Link>
-
-                                    <Link href="/profile">
-                                        <Button
-                                            onClick={() => setIsOpen(false)}
-                                            variant="light"
-                                            className="w-full justify-start rounded-xl py-5 hover:bg-gray-100"
-                                        >
-                                            My Profile
-                                        </Button>
-                                    </Link>
+                                    <p className="text-xs text-gray-400 text-center">
+                                        Signed in as account user
+                                    </p>
 
                                 </div>
                             )}
 
                         </div>
-
-                        {/* FOOTER (Logout fixed bottom) */}
-                        {user && (
-                            <div className="absolute bottom-5 left-0 w-full px-5">
-
-                                <Link href={'/login'}>
-                                    <Button
-
-                                        onClick={handleSignOut}
-                                        className="w-full bg-red-500 text-white rounded-xl py-5 hover:bg-red-600 transition"
-                                    >
-                                        Logout
-                                    </Button>
-                                </Link>
-
-                            </div>
-                        )}
-
                     </Drawer.Dialog>
                 </Drawer.Content>
             </Drawer.Backdrop>
