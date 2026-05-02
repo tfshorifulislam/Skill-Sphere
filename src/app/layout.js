@@ -23,8 +23,7 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${poppins.className} h-full antialiased`}
     >
-      <body
-        className="bg-[#fafafa]">
+      <body>
         <main className="mx-auto max-w-480">
           <Navbar />
           {children}
