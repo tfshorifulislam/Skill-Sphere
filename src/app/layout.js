@@ -29,7 +29,15 @@ export default function RootLayout({ children }) {
           <Navbar />
           {children}
           <Footer />
-          <ToastContainer />
+          <ToastContainer
+            position="top-right"
+            autoClose={3000}
+            hideProgressBar={false}
+            newestOnTop
+            closeOnClick
+            pauseOnHover
+            theme="light"
+          />
         </main>
       </body>
     </html>

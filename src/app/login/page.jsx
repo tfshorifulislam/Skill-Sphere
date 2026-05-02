@@ -14,8 +14,10 @@ import { Check } from "@gravity-ui/icons";
 import { GrGoogle } from "react-icons/gr";
 import { authClient } from "@/lib/auth-client";
 import { toast } from "react-toastify";
+import { useRouter } from "next/navigation";
 
 export default function SignInPage() {
+    const router = useRouter()
 
     const onSubmit = async (e) => {
         e.preventDefault();
@@ -25,14 +27,17 @@ export default function SignInPage() {
         const { data, error } = await authClient.signIn.email({
             email,
             password,
-            callbackURL: '/'
         });
 
-        if (error) {
-            toast.error("Login failed! ❌");
-        } else {
-            toast.success("Login successful! ✅");
+        if (!error) {
+            router.push('/')
+            toast.success('Login Successful');
+
         }
+        else {
+            toast.error('Login failed');
+        }
+
 
     };
 

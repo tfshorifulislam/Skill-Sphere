@@ -5,6 +5,7 @@ import { authClient } from '@/lib/auth-client';
 import { useRouter } from 'next/navigation';
 import { GrGoogle } from 'react-icons/gr';
 import { Check } from '@gravity-ui/icons';
+import { toast } from 'react-toastify';
 
 
 
@@ -25,10 +26,13 @@ const RegisterPage = () => {
             password,
             image
         })
-        console.log(data, error)
-
         if (!error) {
             router.push('/')
+            toast.success('Your account created successfully');
+
+        }
+        else {
+            toast.error('Register failed');
         }
     }
 
@@ -61,7 +65,7 @@ const RegisterPage = () => {
                         type="text">
                         <Label className="text-sm font-medium">Image URL</Label>
                         <Input
-                          className="py-3 rounded-xl border-gray-200 focus:border-[#5D38DE]"
+                            className="py-3 rounded-xl border-gray-200 focus:border-[#5D38DE]"
                             placeholder="Image URL" />
                         <FieldError />
                     </TextField>
