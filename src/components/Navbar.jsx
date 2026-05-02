@@ -1,6 +1,6 @@
 'use client';
 
-import { Button } from "@heroui/react";
+import { Avatar, Button } from "@heroui/react";
 import Image from "next/image";
 import Link from "next/link";
 import { NavbarDrawer } from "./NavbarDrawer";
@@ -21,7 +21,7 @@ const Navbar = () => {
 
             <div className="w-11/12 mx-auto py-3 flex justify-between items-center">
 
-              
+
                 <Link href="/" className="flex items-center">
                     <Image
                         src="/LOGO.png"
@@ -32,14 +32,14 @@ const Navbar = () => {
                     />
                 </Link>
 
-               
+
                 <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-700">
                     <Link className="hover:text-[#5D38DE] transition" href="/">Home</Link>
                     <Link className="hover:text-[#5D38DE] transition" href="/courses">Courses</Link>
                     <Link className="hover:text-[#5D38DE] transition" href="/profile">My Profile</Link>
                 </nav>
 
-               
+
                 <div className="flex items-center gap-3">
 
                     {!user ? (
@@ -58,6 +58,16 @@ const Navbar = () => {
                         </div>
                     ) : (
                         <div className="hidden md:flex gap-3">
+                            <Link href={'/profile'}>
+                                <Avatar>
+                                    <Avatar.Image
+                                        alt={user?.name}
+                                        src={user?.image}
+                                        referrerPolicy="no-referrer" />
+
+                                    <Avatar.Fallback>{user.name.charAt(0)}</Avatar.Fallback>
+                                </Avatar>
+                            </Link>
                             <Button
                                 onClick={handleSignOut}
                                 isIconOnly variant="danger">
@@ -66,7 +76,7 @@ const Navbar = () => {
                         </div>
                     )}
 
-                   
+
                     <div className="md:hidden">
                         <NavbarDrawer />
                     </div>
