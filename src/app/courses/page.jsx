@@ -82,7 +82,7 @@ const CoursesPage = () => {
                 <div className="w-20 h-1 bg-[#5D38DE] mx-auto mt-4 rounded-full"></div>
             </div>
 
-            <div className="w-11/12 md:w-10/12 mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
+            <div className="w-11/12 md:w-10/12 mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6 animate__animated animate__fadeInDown">
                 {filteredCourses.length > 0 ? (
                     filteredCourses.map(course => (
                         <CoursesCard key={course.id} course={course} />

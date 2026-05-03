@@ -14,7 +14,7 @@ const Banner = () => {
             <div className="relative mx-auto w-11/12 md:w-9/12 pt-14 md:pt-24 flex flex-col md:flex-row items-center justify-between gap-12">
 
                
-                <div className="max-w-xl text-center md:text-left">
+                <div className="max-w-xl text-center md:text-left animate__animated animate__fadeInLeft">
 
                    
                     <div className="inline-block mb-4 px-4 py-1 rounded-full bg-[#5D38DE]/10 text-[#5D38DE] text-sm font-medium">
@@ -83,7 +83,7 @@ const Banner = () => {
                 </div>
 
                
-                <div className="relative w-full md:w-1/2 flex justify-center">
+                <div className="relative w-full md:w-1/2 flex justify-center animate__animated animate__fadeInRight">
 
                    
                     <div className="absolute top-6 left-6 bg-white shadow-xl rounded-xl px-4 py-2 text-sm animate-bounce hidden md:block">

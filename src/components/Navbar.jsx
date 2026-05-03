@@ -17,7 +17,7 @@ const Navbar = () => {
     };
 
     return (
-        <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b shadow-sm">
+        <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b shadow-sm animate__animated animate__fadeInDown">
 
             <div className="w-11/12 mx-auto py-3 flex justify-between items-center">
 
