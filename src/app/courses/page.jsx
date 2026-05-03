@@ -12,7 +12,7 @@ const CoursesPage = () => {
 
     useEffect(() => {
         const fetchCourses = async () => {
-            const res = await fetch('https://skill-sphere-topaz.vercel.app/data.json');
+            const res = await fetch('https://skill-sphere-topaz.vercel.app/data.json', { cache: 'no-store' });
             const data = await res.json();
             setCourses(data);
             setFilteredCourses(data);
