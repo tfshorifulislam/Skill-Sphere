@@ -27,7 +27,7 @@ const RegisterPage = () => {
             image
         })
         if (!error) {
-            router.push('/')
+            router.push('/login')
             toast.success('Your account created successfully');
 
         }

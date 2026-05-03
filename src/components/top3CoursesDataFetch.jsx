@@ -18,7 +18,7 @@ const Top3Courses = async () => {
 
             <div className="w-11/12 md:w-10/12 mx-auto">
 
-                {/* Header */}
+                
                 <div className="flex items-end justify-between mb-8 md:mb-10">
 
                     <div>

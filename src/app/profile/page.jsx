@@ -22,7 +22,7 @@ const ProfileCard = () => {
                             src={user?.image || "/default-avatar.jpg"}
                             alt={user?.name}
                             width={100}
-                            height={100}
+                            height={10}
                             className="object-cover"
                         />
                     </div>
