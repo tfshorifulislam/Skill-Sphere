@@ -25,9 +25,9 @@ export default function RootLayout({ children }) {
     >
       <body>
         <main className="mx-auto max-w-480">
-          <Navbar />
+          <Navbar/>
           {children}
-          <Footer />
+          <Footer/>
           <ToastContainer
             position="top-right"
             autoClose={3000}

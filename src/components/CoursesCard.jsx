@@ -4,12 +4,20 @@ import Link from "next/link";
 import { IoStar, IoTime } from "react-icons/io5";
 
 const CoursesCard = ({ course }) => {
-    const { instructor, image, duration, level, rating, title, category, description, id } = course;
+    const { instructor,
+        image,
+        duration,
+        level,
+        rating,
+        title,
+        category,
+        description,
+        id } = course;
 
     return (
         <div className="group bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden">
 
-            {/* Image */}
+
             <div className="relative aspect-4/3 overflow-hidden">
                 <Image
                     className="object-cover group-hover:scale-105 transition duration-300"
@@ -24,22 +32,22 @@ const CoursesCard = ({ course }) => {
                 </Chip>
             </div>
 
-            {/* Content */}
+
             <div className="p-4 md:p-5">
 
-                {/* Title */}
+
                 <h2 className="font-semibold text-lg md:text-xl text-[#5D38DE] line-clamp-1 leading-snug  group-hover:text-[#0f172a] transition">
                     {title}
                 </h2>
 
-                {/* Description (short preview) */}
+
                 {description && (
                     <p className="text-sm text-gray-500 mt-2 leading-6 line-clamp-2">
                         {description}
                     </p>
                 )}
 
-                {/* Instructor + Level */}
+
                 <div className="flex justify-between items-center mt-4">
                     <p className="text-xs md:text-sm text-gray-400 line-clamp-1">
                         By <span className="text-gray-600 font-medium">{instructor}</span>
@@ -50,7 +58,7 @@ const CoursesCard = ({ course }) => {
                     </Chip>
                 </div>
 
-                {/* Rating + Duration */}
+
                 <div className="flex items-center gap-4 mt-4 text-sm text-gray-700">
 
                     <div className="flex items-center gap-1">
@@ -66,7 +74,7 @@ const CoursesCard = ({ course }) => {
                     </div>
                 </div>
 
-                {/* Button */}
+
                 <Link href={`/courses/${id}`}>
                     <Button
                         size="sm"
